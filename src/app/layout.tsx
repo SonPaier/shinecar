@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import Providers from './providers';
 import '../index.css';
 import SeoJsonLd from '@/components/SeoJsonLd';
+import CookieConsent from '@/components/CookieConsent';
 
 const baseMetadata: Metadata = {
   metadataBase: new URL('https://shinecar.pl'),
@@ -11,7 +13,7 @@ const baseMetadata: Metadata = {
     template: '%s | ShineCar',
   },
   description:
-    'Detailing premium w Łukowie: folie PPF, korekta lakieru, powłoki i detailing wnętrz.',
+    'Profesjonalny detailing samochodowy w Łukowie. Folie PPF, korekta lakieru, powłoki ceramiczne, detailing wnętrz. Zadzwoń: 782 195 321 i umów wizytę!',
   manifest: '/site.webmanifest',
   keywords: [
     'detailing Łuków',
@@ -24,24 +26,28 @@ const baseMetadata: Metadata = {
   ],
   alternates: {
     canonical: '/',
-    languages: {
-      'pl-PL': '/',
-    },
   },
   openGraph: {
     url: 'https://shinecar.pl',
     siteName: 'ShineCar',
     title: 'Folie PPF Łuków - Detailing Samochodowy Łuków',
     description:
-      'Detailing premium w Łukowie: folie PPF, korekta lakieru, powłoki i detailing wnętrz.',
+      'Profesjonalny detailing samochodowy w Łukowie. Folie PPF, korekta lakieru, powłoki ceramiczne, detailing wnętrz. Zadzwoń: 782 195 321 i umów wizytę!',
     locale: 'pl_PL',
     type: 'website',
+    images: [{
+      url: 'https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2F9eebaa4a7f7d4db3a5b81f4f46b76ff6?format=webp&width=1200',
+      width: 1200,
+      height: 630,
+      alt: 'ShineCar — Detailing Samochodowy Łuków',
+    }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Folie PPF Łuków - Detailing Samochodowy Łuków',
     description:
-      'Detailing premium w Łukowie: folie PPF, korekta lakieru, powłoki i detailing wnętrz.',
+      'Profesjonalny detailing samochodowy w Łukowie. Folie PPF, korekta lakieru, powłoki ceramiczne, detailing wnętrz. Zadzwoń: 782 195 321 i umów wizytę!',
+    images: ['https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2F9eebaa4a7f7d4db3a5b81f4f46b76ff6?format=webp&width=1200'],
   },
   robots: {
     index: true,
@@ -87,9 +93,24 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pl">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SEKRLB5DT4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SEKRLB5DT4');
+          `}
+        </Script>
+      </head>
       <body>
         <SeoJsonLd />
         <Providers>{children}</Providers>
+        <CookieConsent />
       </body>
     </html>
   );

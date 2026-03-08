@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/_next/', '/api/'],
       },
     ],
     sitemap: 'https://shinecar.pl/sitemap.xml',

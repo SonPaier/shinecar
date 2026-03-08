@@ -1,3 +1,4 @@
+"use client";
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Button } from './ui/button';
 
@@ -37,58 +38,66 @@ const Contact = () => {
     <section id="contact" className="mt-12 py-12 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-8">
-          <div className="h-1 w-12 bg-gradient-gold rounded-full mx-auto" />
+          <div className="h-1 w-12 bg-primary rounded-full mx-auto" />
           <h2 className="font-luxury text-3xl lg:text-4xl text-foreground">Kontakt</h2>
           <p className="text-base text-muted-foreground max-w-2xl mx-auto">Umów termin lub zadaj pytanie.</p>
         </div>
 
-        {/* Info cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {contactInfo.map((item, index) => {
-            const IconComponent = item.icon;
-            const content = (
-              <div className="border border-border rounded-2xl p-4 bg-gradient-glass backdrop-blur-sm h-full">
-                <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center">
-                    <IconComponent className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm">{item.subtitle}</p>
-                    <p className="text-foreground mt-1">{item.value}</p>
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Left - Contact info */}
+          <div className="space-y-4">
+            {contactInfo.map((item, index) => {
+              const IconComponent = item.icon;
+              const content = (
+                <div className="border border-border rounded-2xl p-4 bg-gradient-glass backdrop-blur-sm h-full">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                      <IconComponent className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm">{item.subtitle}</p>
+                      <p className="text-foreground mt-1">{item.value}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
+              );
 
-            return item.href ? (
-              <a key={index} href={item.href} className="block">
-                {content}
+              return item.href ? (
+                <a key={index} href={item.href} className="block">
+                  {content}
+                </a>
+              ) : (
+                <div key={index}>{content}</div>
+              );
+            })}
+
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <Button asChild>
+                <a href="tel:+48782195321">Zadzwoń teraz</a>
+              </Button>
+              <a
+                href="mailto:shinecarkosmetyka@o2.pl"
+                className="border border-input bg-background px-3 py-2 rounded-md hover:bg-accent inline-flex items-center"
+              >
+                Napisz email
               </a>
-            ) : (
-              <div key={index}>{content}</div>
-            );
-          })}
-        </div>
-
-        {/* CTA card */}
-        <div className="mt-8 border border-border rounded-3xl p-6 bg-gradient-glass backdrop-blur-sm text-center space-y-4">
-          <h3 className="font-luxury text-2xl text-foreground">Umów wizytę w 1 minutę</h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Najszybciej skontaktujesz się z nami telefonicznie. Możesz też wysłać maila – odpowiemy tego samego dnia.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Button asChild className="bg-gradient-gold text-primary-foreground">
-              <a href="tel:+48123456789">Zadzwoń teraz</a>
-            </Button>
-            <button
-              onClick={() => { window.location.href = 'mailto:shinecarkosmetyka@o2.pl'; }}
-              className="border border-input bg-background px-3 py-2 rounded-md hover:font-semibold"
-            >
-              Napisz email
-            </button>
+            </div>
           </div>
-          <p className="text-xs text-muted-foreground">Pracujemy: pn–pt 8:00–18:00, sob 9:00–16:00</p>
+
+          {/* Right - Google Maps */}
+          <div className="border border-border rounded-2xl overflow-hidden bg-gradient-glass backdrop-blur-sm">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.0!2d22.3348136!3d51.8451033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472207d03ce733a5%3A0x5eb59bb4e54b9f74!2sShine%20Car%20%E2%80%93%20Auto%20Detailing%20%C5%81uk%C3%B3w!5e0!3m2!1spl!2spl"
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: '458px' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokalizacja ShineCar na mapie Google"
+            />
+          </div>
         </div>
       </div>
     </section>

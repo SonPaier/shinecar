@@ -70,7 +70,6 @@ export default {
       backgroundImage: {
         "gradient-hero": "var(--gradient-hero)",
         "gradient-card": "var(--gradient-card)",
-        "gradient-gold": "var(--gradient-gold)",
         "gradient-luxury": "var(--gradient-luxury)",
         "gradient-glass": "var(--gradient-glass)",
       },

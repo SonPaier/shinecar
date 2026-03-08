@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const LOGOS = [
   {
@@ -19,7 +20,7 @@ const Partners: React.FC = () => {
       <div className="container mx-auto px-4">
 
         <div className="text-center space-y-4 mb-8">
-          <h3 className="text-lg md:text-xl font-semibold text-foreground">Nasze partnerstwa</h3>
+          <h2 className="text-lg md:text-xl font-semibold text-foreground">Nasze partnerstwa</h2>
           <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Pracujemy na najlepszych produktach klasy premium, których jesteśmy certyfikowanymi aplikatorami
           </p>
@@ -37,7 +38,7 @@ const Partners: React.FC = () => {
               style={{ minWidth: 220 }}
             >
               <div className="h-20 md:h-24 lg:h-28 flex items-center">
-                <img loading="lazy" src={logo.src} alt={logo.alt} className="h-full w-auto object-contain" />
+                <Image loading="lazy" src={logo.src} alt={logo.alt} width={220} height={112} className="h-full w-auto object-contain" />
               </div>
             </a>
           ))}

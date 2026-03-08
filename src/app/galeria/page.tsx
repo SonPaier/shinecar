@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { X } from 'lucide-react';
@@ -126,6 +127,7 @@ const PHOTOS: Photo[] = [
 export default function GaleriaPage() {
   const [selected, setSelected] = useState<number | null>(null);
   const [activeCategory, setActiveCategory] = useState<'Wszystkie' | Photo['category']>('Wszystkie');
+  const [visibleCount, setVisibleCount] = useState(24);
 
   useEffect(() => {
     if (window.location.hash) {
@@ -148,6 +150,17 @@ export default function GaleriaPage() {
     filtered = [...withDescriptions, ...withoutDescriptions];
   }
 
+  const getAlt = (item: Photo, index: number) => {
+    if (item.description) return item.description;
+    if (item.title) return item.title;
+    const categoryAlts: Record<Photo['category'], string> = {
+      'Folie PPF': 'Realizacja oklejenia folią ochronną PPF',
+      'Korekta Lakieru': 'Realizacja korekty lakieru',
+      'Detailing Wnętrza': 'Realizacja detailingu wnętrza samochodu',
+    };
+    return `${categoryAlts[item.category]} nr ${index + 1} — ShineCar Łuków`;
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -156,8 +169,8 @@ export default function GaleriaPage() {
           <div className="container mx-auto px-6">
             <div className="max-w-7xl mx-auto">
               <div className="text-center space-y-6 mb-8">
-                <div className="h-1 w-16 bg-gradient-gold rounded-full mx-auto" />
-                <h2 className="font-luxury text-4xl lg:text-5xl text-foreground">Galeria</h2>
+                <div className="h-1 w-16 bg-primary rounded-full mx-auto" />
+                <h1 className="font-luxury text-4xl lg:text-5xl text-foreground">Galeria Realizacji — Detailing Łuków</h1>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Wybierz kategorię, aby przeglądać realizacje.</p>
               </div>
 
@@ -165,7 +178,7 @@ export default function GaleriaPage() {
                 {categories.map((c) => (
                   <button
                     key={c}
-                    onClick={() => setActiveCategory(c)}
+                    onClick={() => { setActiveCategory(c); setVisibleCount(24); }}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                       activeCategory === c ? 'bg-gold text-deep-black' : 'bg-card text-foreground/80 hover:bg-muted'
                     }`}
@@ -176,13 +189,14 @@ export default function GaleriaPage() {
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filtered.map((item, index) => (
+                {filtered.slice(0, visibleCount).map((item, index) => (
                   <button
                     key={`${item.url}-${index}`}
                     onClick={() => setSelected(index)}
+                    aria-label={`Powiększ: ${getAlt(item, index)}`}
                     className="group relative h-72 overflow-hidden rounded-3xl border border-border bg-gradient-glass text-left"
                   >
-                    <img src={item.url} alt={item.title || item.category} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <Image src={item.url} alt={getAlt(item, index)} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-deep-black/70 via-transparent to-transparent opacity-60" />
                     <div className="absolute bottom-4 left-4 right-4 space-y-1">
                       <h3 className="text-white font-semibold text-lg">{item.title || item.category}</h3>
@@ -196,6 +210,17 @@ export default function GaleriaPage() {
                 ))}
               </div>
 
+              {visibleCount < filtered.length && (
+                <div className="text-center mt-10">
+                  <button
+                    onClick={() => setVisibleCount((prev) => prev + 24)}
+                    className="px-8 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:brightness-110 transition-all"
+                  >
+                    Załaduj więcej ({filtered.length - visibleCount} pozostało)
+                  </button>
+                </div>
+              )}
+
               {selected !== null && (
                 <div className="fixed inset-0 z-50 bg-deep-black/95 backdrop-blur-sm flex items-center justify-center">
                   <button
@@ -207,13 +232,16 @@ export default function GaleriaPage() {
                   </button>
 
                   <div className="max-w-5xl max-h-[85vh] mx-8 text-center">
-                    <img
+                    <Image
                       src={filtered[selected].url}
-                      alt={filtered[selected].title || filtered[selected].category}
+                      alt={getAlt(filtered[selected], selected)}
+                      width={1200}
+                      height={800}
                       className="w-full h-auto object-contain rounded-2xl shadow-luxury"
+                      sizes="(max-width: 1280px) 90vw, 1200px"
                     />
                     <div className="mt-8 space-y-4">
-                      <span className="inline-block px-4 py-2 bg-gradient-gold text-primary-foreground text-sm font-semibold rounded-full shadow-gold">
+                      <span className="inline-block px-4 py-2 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
                         {filtered[selected].category}
                       </span>
                       {filtered[selected].title && (

@@ -1,3 +1,5 @@
+"use client";
+import Image from 'next/image';
 import { CheckCircle } from 'lucide-react';
 import { AnimatedP } from '../hooks/animations';
 import { motion } from 'framer-motion';
@@ -10,7 +12,7 @@ const About = () => {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <div className="h-1 w-16 bg-gradient-gold rounded-full" />
+            <div className="h-1 w-16 bg-primary rounded-full" />
             <h2 className="font-luxury text-4xl sm:text-5xl lg:text-6xl text-foreground"><AnimatedP>ShineCar Kosmetyka</AnimatedP></h2>
             <p className="text-lg text-muted-foreground max-w-2xl">
               <AnimatedP>Studio detailingu samochodowego klasy premium. Specjalizujemy się w Foliach Ochronnych PPF,
@@ -39,7 +41,9 @@ const About = () => {
             </motion.ul>
           </div>
           <div>
-            <img src={marcinImage} alt="ShineCar Kosmetyka" className="w-full rounded-3xl shadow-luxury" />
+            <div className="relative aspect-[4/3] w-full">
+              <Image src={marcinImage} alt="Studio detailingu ShineCar — warsztat w okolicach Łukowa" fill className="object-cover rounded-3xl shadow-luxury" sizes="(max-width: 1024px) 100vw, 50vw" />
+            </div>
           </div>
         </div>
       </div>

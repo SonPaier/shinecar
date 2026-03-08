@@ -1,4 +1,6 @@
+"use client";
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 type Service = {
   id: number;
@@ -85,8 +87,8 @@ const ServiceModal: React.FC<Props> = ({ open, service, onClose }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left - Image */}
-          <div className="w-full h-80 md:h-auto md:min-h-[420px] overflow-hidden bg-muted-foreground/5">
-            <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+          <div className="relative w-full h-80 md:h-auto md:min-h-[420px] overflow-hidden bg-muted-foreground/5">
+            <Image src={service.image} alt={service.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
 
           {/* Right - Content */}
