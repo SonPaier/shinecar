@@ -81,7 +81,8 @@ export default {
         "subtle": "var(--shadow-subtle)",
       },
       fontFamily: {
-        "luxury": ["Playfair Display", "serif"],
+        "sans": ["var(--font-poppins)", "system-ui", "sans-serif"],
+        "luxury": ["var(--font-poppins)", "system-ui", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

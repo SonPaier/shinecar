@@ -1,9 +1,17 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
+import { Poppins } from 'next/font/google';
 import Providers from './providers';
 import '../index.css';
 import SeoJsonLd from '@/components/SeoJsonLd';
 import CookieConsent from '@/components/CookieConsent';
+
+const poppins = Poppins({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-poppins',
+});
 
 const baseMetadata: Metadata = {
   metadataBase: new URL('https://shinecar.pl'),
@@ -92,7 +100,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pl">
+    <html lang="pl" className={poppins.variable}>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SEKRLB5DT4"

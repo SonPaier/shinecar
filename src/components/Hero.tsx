@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-import { AnimatedP, AnimatedDiv } from '../hooks/animations';
+import { AnimatedDiv } from '../hooks/animations';
 const heroImage = 'https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2F9eebaa4a7f7d4db3a5b81f4f46b76ff6?format=webp&width=800';
 
 const Hero = () => {
@@ -32,7 +32,7 @@ const Hero = () => {
               <h2 className="text-xl text-muted-foreground max-w-2xl font-normal">Profesjonalna ochrona i pielęgnacja Twojego samochodu. Wykonujemy aplikację folii PPF, korektę lakieru, powłoki ceramiczne oraz kompleksowy detailing wnętrza.</h2>
             </AnimatedDiv>
             <div className="flex flex-col sm:flex-row gap-5 pt-2">
-              <AnimatedP>
+              <AnimatedDiv>
                 <Button
                 size="lg"
                 className="px-8 py-4 h-auto"
@@ -53,7 +53,7 @@ const Hero = () => {
                 Umów wizytę
                 <ArrowRight className="ml-3 w-5 h-5" />
               </Button>
-              </AnimatedP>
+              </AnimatedDiv>
               <Button variant="ghost" size="lg" className="text-foreground/80 hover:text-primary" onClick={() => {
                 const location = window.location.pathname;
                 if (location !== '/') {
@@ -63,7 +63,7 @@ const Hero = () => {
                 const el = document.getElementById('services');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}>
-                <AnimatedP>Poznaj ofertę</AnimatedP>
+                <AnimatedDiv className="inline">Poznaj ofertę</AnimatedDiv>
               </Button>
             </div>
           </div>

@@ -21,6 +21,7 @@ export interface BlogArticle {
 const blogImage1 = 'https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2Faa9360e1636e474abf453627071b5f19?format=webp&width=800';
 const blogImage2 = 'https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2F4381a02e8bfa475ab87e0a6da7f9e7fa?format=webp&width=800';
 const blogImage3 = 'https://cdn.builder.io/api/v1/image/assets%2Fa59c3b14b9b7404f8e5c72990dc66950%2Fa70409b6c6f74d1f8eef91a32c353e5c?format=webp&width=800';
+const blogImage4 = 'https://cdn.builder.io/api/v1/image/assets%2Fa59c3b14b9b7404f8e5c72990dc66950%2F9013f21d74f14265a7e8ba266de2e2e9?format=webp&width=800';
 
 export const blogArticles: BlogArticle[] = [
   {
@@ -235,7 +236,7 @@ export const blogArticles: BlogArticle[] = [
       'Wszystko o folii PPF w jednym miejscu: rodzaje folii, pakiety ochronne, proces aplikacji, FAQ. Kompletne kompendium od ShineCar Łuków. Folie bezbarwne, matowe, karbonowe.',
     excerpt:
       'Bezbarwna folia PPF to najskuteczniejsza metoda ochrony lakieru. Poznaj rodzaje folii, pakiety ochronne, proces aplikacji i odpowiedzi na najczęstsze pytania.',
-    image: blogImage2,
+    image: blogImage4,
     date: '2026-03-08',
     readTime: '7 min',
     keywords: [
