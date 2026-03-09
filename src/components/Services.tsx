@@ -31,10 +31,8 @@ const Services: React.FC = () => {
       description: `Folia ochronna PPF to przezroczysta, poliuretanowa warstwa zabezpieczająca lakier samochodu.`,
       features: ['Ochrona na lata', 'Hydrofobowość', 'Łatwość mycia'],
       image: serviceImage3,
-      price: `Front:
-      5 500 – 7 000 zł
-      Całe auto:
-      11 000 – 16 000 zł`,
+      price: `Full Front: od 4 500 zł
+Full Body: od 10 000 zł`,
       duration: '2-7 dni roboczych',
     },
     {
@@ -47,7 +45,7 @@ const Services: React.FC = () => {
         `,
       features: ['Usunięcie rys', 'Przywrócenie blasku', 'Ochrona UV'],
       image: serviceImage4,
-      price: 'od 800 zł do 2500 zł',
+      price: 'od 1 000 zł do 2 700 zł',
       duration: '1-3 dni roboczych',
     },
     {
@@ -61,17 +59,17 @@ const Services: React.FC = () => {
         `,
       features: ['Czyszczenie tapicerki', 'Pielęgnacja skóry', 'Odświeżenie powietrza'],
       image: serviceImage2,
-      price: 'od 400 zł',
+      price: 'od 250 zł',
       duration: '4-5 godzin',
     },
     {
       id: 4,
       slug: 'powloki-ceramiczne',
-      title: 'POWŁOKI CERAMICZNE / ELASTOMEROWE',
+      title: 'POWŁOKI CERAMICZNE',
       description: `Trwałe zabezpieczenia lakieru przed utlenianiem, chemikaliami i zabrudzeniami. Poprawiają połysk i ułatwiają mycie.`,
       features: ['36–60 miesięcy gwarancji (w zależności od pakietu)', 'Top coat dla maksymalnego połysku i śliskości', 'Opcje dla felg, szyb i elementów plastikowych'],
       image: serviceImage1,
-      price: '1 500 – 3 000 zł',
+      price: 'od 1 000 zł do 2 800 zł',
       duration: '1-2 dni robocze',
     },
   ];

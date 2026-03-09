@@ -167,6 +167,13 @@ const Header = () => {
               Cennik
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </Link>
+            <Link
+              href="/blog"
+              className="text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm tracking-wide relative group"
+            >
+              Blog
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+            </Link>
           </nav>
 
           {/* Contact CTA */}
@@ -250,6 +257,13 @@ const Header = () => {
                 className="text-left text-primary hover:text-primary transition-colors font-medium px-4 py-3 text-lg"
               >
                 Cennik
+              </Link>
+              <Link
+                href="/blog"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-left text-foreground hover:text-primary transition-colors font-medium px-4 py-3 text-lg"
+              >
+                Blog
               </Link>
 
               <div className="px-4 py-4 space-y-4">

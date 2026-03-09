@@ -94,14 +94,14 @@ export const services: ServiceData[] = [
         ],
       },
     ],
-    price: 'Front: 5 500 – 7 000 zł | Całe auto: 11 000 – 16 000 zł',
+    price: 'Full Front: od 4 500 zł | Full Body: od 10 000 zł',
     duration: '2–7 dni roboczych',
     image: serviceImage3,
     faq: [
       {
         question: 'Ile kosztuje oklejenie samochodu folią PPF w Łukowie?',
         answer:
-          'Koszt oklejenia frontu to 5 500 – 7 000 zł, a całego pojazdu 11 000 – 16 000 zł. Cena zależy od rozmiaru auta, wybranej folii i zakresu prac.',
+          'Koszt oklejenia frontu (Full Front) to od 4 500 zł, a całego pojazdu (Full Body) od 10 000 zł netto. Cena zależy od rozmiaru auta, wybranej folii i zakresu prac.',
       },
       {
         question: 'Jak długo trwa aplikacja folii PPF?',
@@ -171,7 +171,7 @@ export const services: ServiceData[] = [
         ],
       },
     ],
-    price: 'od 800 zł do 2 500 zł',
+    price: 'od 1 000 zł do 2 700 zł',
     duration: '1–3 dni roboczych',
     image: serviceImage4,
     faq: [
@@ -195,7 +195,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: 'powloki-ceramiczne',
-    title: 'Powłoki Ceramiczne i Elastomerowe',
+    title: 'Powłoki Ceramiczne',
     pageTitle: 'Powłoka ceramiczna: Zaawansowane zabezpieczenie i blask lakieru w ShineCar',
     metaTitle: 'Powłoki Ceramiczne Łuków — Trwała Ochrona Lakieru',
     metaDescription:
@@ -242,7 +242,7 @@ export const services: ServiceData[] = [
         ],
       },
     ],
-    price: '1 500 – 3 000 zł',
+    price: 'od 1 000 zł do 2 800 zł',
     duration: '2–4 dni',
     image: serviceImage1,
     faq: [
@@ -267,7 +267,84 @@ export const services: ServiceData[] = [
           'W zależności od potrzeb i wybranego pakietu, możemy zdemontować drobne elementy (np. tablice rejestracyjne czy emblematy), aby precyzyjnie pokryć każdą szczelinę preparatem ochronnym.',
       },
     ],
-    keywords: ['powłoki ceramiczne Łuków', 'ceramic coating', 'powłoka elastomerowa', 'zabezpieczenie lakieru'],
+    keywords: ['powłoki ceramiczne Łuków', 'ceramic coating', 'powłoka ceramiczna', 'zabezpieczenie lakieru'],
+  },
+  {
+    slug: 'powloki-elastomerowe',
+    title: 'Powłoki Elastomerowe',
+    pageTitle: 'Powłoka elastomerowa Łuków – Nowa era ochrony lakieru w ShineCar',
+    metaTitle: 'Powłoki Elastomerowe Łuków — Najtrwalsza Ochrona Lakieru',
+    metaDescription:
+      'Powłoki elastomerowe w Łukowie. Samoregeneracja, totalna hydrofobowość i gwarancja do 7 lat. Technologia przewyższająca klasyczną ceramikę. ShineCar Łuków.',
+    description:
+      'Szukasz ochrony, która potrafi więcej niż klasyczna ceramika? W ShineCar Łuków wprowadzamy technologię przyszłości – powłoki elastomerowe. To najbardziej zaawansowane zabezpieczenie lakieru, które łączy ekstremalną odporność z niespotykaną elastycznością.',
+    content: [
+      'Powłoka elastomerowa to inteligentna warstwa ochronna oparta na nanocząsteczkach elastomeru. W przeciwieństwie do tradycyjnych rozwiązań, elastomer tworzy na powierzchni lakieru trwałe wiązania molekularne, które nie tylko chronią, ale pracują razem z lakierem. Jest to bariera odporna na mikrozarysowania, chemię drogową i promieniowanie UV.',
+    ],
+    features: [
+      'Samoregeneracja drobnych zarysowań pod wpływem ciepła',
+      'Totalna hydrofobowość — woda i brud uciekają z lakieru',
+      'Odporność na chemię drogową, sól i ptasie odchody',
+      'Głębia koloru i „mokry" połysk',
+      'Gwarancja trwałości do 7 lat',
+      'Elastyczność — lepsza absorpcja uderzeń niż ceramika',
+    ],
+    sections: [
+      {
+        heading: 'Dlaczego elastomer wygrywa z powłoką ceramiczną?',
+        paragraphs: [
+          'Choć ceramika jest świetnym rozwiązaniem, powłoki elastomerowe oferują korzyści, których nie znajdziesz nigdzie indziej:',
+        ],
+        bullets: [
+          'Samoregeneracja i elastyczność: Elastomer jest elastyczny, co sprawia, że lepiej absorbuje uderzenia i jest odporny na mikropęknięcia. Wiele powłok tego typu wykazuje właściwości samonaprawcze pod wpływem ciepła.',
+          'Totalna hydrofobowość: Woda i brud dosłownie uciekają z lakieru. Dzięki temu mycie auta staje się czystą przyjemnością, a samochód znacznie dłużej pozostaje czysty.',
+          'Odporność na „chemię": Elastomer wykazuje potężną odporność na agresywne środki czyszczące, sól drogową oraz soki z drzew i ptasie odchody, które są zmorą każdego kierowcy.',
+          'Głębia koloru: Powłoka nadaje lakierowi niesamowity, „mokry" połysk, który podkreśla każdą linię nadwozia Twojego samochodu.',
+        ],
+      },
+      {
+        heading: 'Korzyści z wyboru elastomeru w ShineCar Łuków',
+        bullets: [
+          'Długoterminowa gwarancja: Oferujemy pakiety zabezpieczenia z pisemną gwarancją trwałości od 3 do nawet 7 lat.',
+          'Ochrona przed blaknięciem: Blokada promieni UV sprawia, że Twój lakier zachowa fabryczną intensywność koloru przez lata.',
+          'Wzrost wartości auta: Samochód z udokumentowanym zabezpieczeniem elastomerowym to pewniejsza sprzedaż i wyższa cena w przyszłości.',
+          'Łatwość eksploatacji: Zapomnij o uciążliwym szorowaniu – brud nie ma punktu zaczepienia.',
+        ],
+      },
+      {
+        heading: 'Postaw na technologię premium w swoim mieście',
+        paragraphs: [
+          'W ShineCar Łuków nie uznajemy kompromisów. Aplikacja powłoki elastomerowej to proces wymagający precyzji i odpowiednich warunków, które zapewniamy w naszym studio.',
+          'Chcesz poczuć gładkość lakieru, jakiej jeszcze nie znałeś? Skontaktuj się z nami i zapytaj o wolny termin na zabezpieczenie elastomerem. Twoje auto zasługuje na najlepszą ochronę dostępną na rynku.',
+        ],
+      },
+    ],
+    price: 'od 1 800 zł do 2 800 zł',
+    duration: '2–4 dni',
+    image: serviceImage1,
+    faq: [
+      {
+        question: 'Czym powłoka elastomerowa różni się od ceramicznej?',
+        answer:
+          'Powłoka elastomerowa jest bardziej elastyczna niż ceramika, co oznacza lepszą absorpcję uderzeń i odporność na mikropęknięcia. Posiada też właściwości samonaprawcze pod wpływem ciepła, czego klasyczna ceramika nie oferuje.',
+      },
+      {
+        question: 'Jak długo utrzymuje się powłoka elastomerowa?',
+        answer:
+          'W zależności od wybranego pakietu, powłoka elastomerowa utrzymuje się od 3 do 7 lat. Oferujemy pakiety 3-letnie, 5-letnie i 7-letnie z pisemną gwarancją trwałości.',
+      },
+      {
+        question: 'Czy powłoka elastomerowa wymaga specjalnej pielęgnacji?',
+        answer:
+          'Nie — dzięki silnym właściwościom hydrofobowym codzienne utrzymanie auta w czystości jest łatwiejsze niż kiedykolwiek. Zalecamy jedynie mycie bezpieczną metodą detailingową i unikanie myjni szczotkowych.',
+      },
+      {
+        question: 'Ile kosztuje powłoka elastomerowa w ShineCar Łuków?',
+        answer:
+          'Koszt powłoki elastomerowej zależy od wybranego pakietu gwarancyjnego: 3 lata od 1 800 zł, 5 lat od 2 300 zł, 7 lat od 2 800 zł netto. Cena może się różnić w zależności od rozmiaru pojazdu.',
+      },
+    ],
+    keywords: ['powłoka elastomerowa Łuków', 'powłoki elastomerowe', 'zabezpieczenie lakieru Łuków', 'ochrona lakieru'],
   },
   {
     slug: 'detailing-wnetrza',
@@ -340,7 +417,7 @@ export const services: ServiceData[] = [
         ],
       },
     ],
-    price: 'od 400 zł',
+    price: 'od 250 zł',
     duration: '4–5 godzin',
     image: serviceImage2,
     faq: [
@@ -413,7 +490,7 @@ export const services: ServiceData[] = [
         ],
       },
     ],
-    price: 'Wycena indywidualna — zadzwoń',
+    price: 'od 13 000 zł',
     duration: '5–10 dni roboczych',
     image: serviceImage3,
     faq: [
@@ -489,7 +566,7 @@ export const services: ServiceData[] = [
         ],
       },
     ],
-    price: 'od 150 zł',
+    price: 'od 250 zł',
     duration: '1,5–2 godziny',
     image: serviceImage1,
     faq: [
