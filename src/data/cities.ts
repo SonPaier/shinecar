@@ -69,6 +69,66 @@ export const cities: CityData[] = [
     distance: 'ok. 25 km od Radzynia Podlaskiego',
     keywords: ['detailing Radzyń Podlaski', 'folie PPF Radzyń Podlaski', 'korekta lakieru Radzyń Podlaski'],
   },
+  {
+    slug: 'detailing-garwolin',
+    name: 'Garwolin',
+    metaTitle: 'Detailing Samochodowy Garwolin — Folie PPF, Korekta Lakieru',
+    metaDescription:
+      'Detailing samochodowy dla klientów z Garwolina. Folie PPF, korekta lakieru, powłoki ceramiczne. ShineCar — dojazd z Łukowa, ok. 60 km.',
+    heading: 'Detailing Samochodowy Garwolin',
+    intro: [
+      'ShineCar oferuje profesjonalny detailing samochodowy dla klientów z Garwolina i okolic. Nasz warsztat w Świderkach koło Łukowa znajduje się ok. 60 km od Garwolina — wygodny dojazd drogą krajową nr 76.',
+      'Dla klientów z Garwolina realizujemy pełen zakres usług: folie ochronne PPF, korektę lakieru, powłoki ceramiczne i elastomerowe, detailing wnętrza oraz mycie detailingowe premium.',
+      'Garwolin to ważne miasto na trasie Warszawa–Lublin. Coraz więcej właścicieli samochodów z Garwolina i powiatu garwolińskiego korzysta z naszych usług, doceniając profesjonalizm i konkurencyjne ceny.',
+    ],
+    distance: 'ok. 60 km od Garwolina',
+    keywords: ['detailing Garwolin', 'folie PPF Garwolin', 'korekta lakieru Garwolin', 'powłoki ceramiczne Garwolin'],
+  },
+  {
+    slug: 'detailing-biala-podlaska',
+    name: 'Biała Podlaska',
+    metaTitle: 'Detailing Samochodowy Biała Podlaska — Folie PPF, Korekta Lakieru',
+    metaDescription:
+      'Detailing samochodowy dla klientów z Białej Podlaskiej. Folie PPF, korekta lakieru, powłoki ceramiczne. ShineCar — dojazd z Łukowa, ok. 70 km.',
+    heading: 'Detailing Samochodowy Biała Podlaska',
+    intro: [
+      'Szukasz profesjonalnego detailingu w Białej Podlaskiej? ShineCar obsługuje klientów z Białej Podlaskiej i całego regionu. Nasz warsztat w Świderkach koło Łukowa jest oddalony ok. 70 km od Białej Podlaskiej.',
+      'Oferujemy kompletny zakres usług detailingowych: folie ochronne PPF (bezbarwne i kolorowe), korektę lakieru, powłoki ceramiczne i elastomerowe, detailing wnętrza oraz mycie detailingowe.',
+      'Biała Podlaska to jedno z największych miast Lubelszczyzny. Nasi klienci z Białej Podlaskiej cenią jakość usług, indywidualne podejście i atrakcyjne ceny w porównaniu z salonami w dużych aglomeracjach.',
+    ],
+    distance: 'ok. 70 km od Białej Podlaskiej',
+    keywords: ['detailing Biała Podlaska', 'folie PPF Biała Podlaska', 'korekta lakieru Biała Podlaska'],
+  },
+  {
+    slug: 'detailing-ryki',
+    name: 'Ryki',
+    metaTitle: 'Detailing Samochodowy Ryki — Folie PPF, Korekta Lakieru',
+    metaDescription:
+      'Detailing samochodowy dla klientów z Ryk. Folie PPF, korekta lakieru, powłoki ceramiczne. ShineCar — dojazd z Łukowa, ok. 45 km.',
+    heading: 'Detailing Samochodowy Ryki',
+    intro: [
+      'ShineCar oferuje profesjonalny detailing samochodowy dla klientów z Ryk i okolic. Nasz warsztat w Świderkach koło Łukowa znajduje się ok. 45 km od Ryk — wygodny dojazd drogą przez Adamów.',
+      'Dla klientów z Ryk realizujemy pełen zakres usług: folie ochronne PPF, korektę lakieru, powłoki ceramiczne i elastomerowe, detailing wnętrza oraz mycie detailingowe premium.',
+      'Ryki to dynamicznie rozwijające się miasto na trasie Lublin–Warszawa. Coraz więcej właścicieli samochodów z Ryk i powiatu ryckiego wybiera ShineCar, doceniając profesjonalną obsługę i konkurencyjne ceny w porównaniu z dużymi miastami.',
+    ],
+    distance: 'ok. 45 km od Ryk',
+    keywords: ['detailing Ryki', 'folie PPF Ryki', 'korekta lakieru Ryki', 'powłoki ceramiczne Ryki'],
+  },
+  {
+    slug: 'detailing-lubartow',
+    name: 'Lubartów',
+    metaTitle: 'Detailing Samochodowy Lubartów — Folie PPF, Korekta Lakieru',
+    metaDescription:
+      'Detailing samochodowy dla klientów z Lubartowa. Folie PPF, korekta lakieru, powłoki ceramiczne. ShineCar — dojazd z Łukowa, ok. 55 km.',
+    heading: 'Detailing Samochodowy Lubartów',
+    intro: [
+      'Szukasz profesjonalnego detailingu samochodowego w Lubartowie? ShineCar obsługuje klientów z Lubartowa i całego powiatu lubartowskiego. Nasz warsztat w Świderkach koło Łukowa jest oddalony ok. 55 km od Lubartowa.',
+      'Dla klientów z Lubartowa oferujemy kompletny zakres usług: folie ochronne PPF (bezbarwne i kolorowe), korektę lakieru, powłoki ceramiczne i elastomerowe, detailing wnętrza oraz mycie detailingowe.',
+      'Lubartów to ważne miasto w województwie lubelskim. Nasi klienci z Lubartowa cenią wysoką jakość usług, indywidualne podejście do każdego pojazdu i atrakcyjne ceny w porównaniu z salonami w Lublinie.',
+    ],
+    distance: 'ok. 55 km od Lubartowa',
+    keywords: ['detailing Lubartów', 'folie PPF Lubartów', 'korekta lakieru Lubartów', 'powłoki ceramiczne Lubartów'],
+  },
 ];
 
 export function getCityBySlug(slug: string): CityData | undefined {
