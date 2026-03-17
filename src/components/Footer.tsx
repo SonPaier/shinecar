@@ -56,6 +56,7 @@ const Footer = () => {
               <li><Link href="/uslugi/detailing-wnetrza" className="text-muted-foreground hover:text-primary transition-colors">Detailing wnętrza</Link></li>
               <li><Link href="/uslugi/folie-kolorowe-ppf" className="text-muted-foreground hover:text-primary transition-colors">Folie kolorowe PPF</Link></li>
               <li><Link href="/uslugi/mycie-detailingowe" className="text-muted-foreground hover:text-primary transition-colors">Mycie detailingowe</Link></li>
+              <li><Link href="/uslugi/odbior-auta-z-salonu" className="text-muted-foreground hover:text-primary transition-colors">Odbiór auta z salonu</Link></li>
             </ul>
           </div>
 
@@ -67,6 +68,10 @@ const Footer = () => {
               <li><Link href="/detailing-siedlce" className="text-muted-foreground hover:text-primary transition-colors">Detailing Siedlce</Link></li>
               <li><Link href="/detailing-miedzyrzec-podlaski" className="text-muted-foreground hover:text-primary transition-colors">Detailing Międzyrzec Podlaski</Link></li>
               <li><Link href="/detailing-radzyn-podlaski" className="text-muted-foreground hover:text-primary transition-colors">Detailing Radzyń Podlaski</Link></li>
+              <li><Link href="/detailing-biala-podlaska" className="text-muted-foreground hover:text-primary transition-colors">Detailing Biała Podlaska</Link></li>
+              <li><Link href="/detailing-garwolin" className="text-muted-foreground hover:text-primary transition-colors">Detailing Garwolin</Link></li>
+              <li><Link href="/detailing-ryki" className="text-muted-foreground hover:text-primary transition-colors">Detailing Ryki</Link></li>
+              <li><Link href="/detailing-lubartow" className="text-muted-foreground hover:text-primary transition-colors">Detailing Lubartów</Link></li>
             </ul>
             <p className="text-muted-foreground text-sm mt-6">
               Zachęcamy do zobaczenia naszych realizacji oraz sprawdzenia oferty.

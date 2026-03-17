@@ -196,10 +196,10 @@ export const services: ServiceData[] = [
   {
     slug: 'powloki-ceramiczne',
     title: 'Powłoki Ceramiczne',
-    pageTitle: 'Powłoka ceramiczna: Zaawansowane zabezpieczenie i blask lakieru w ShineCar',
-    metaTitle: 'Powłoki Ceramiczne Łuków — Trwała Ochrona Lakieru',
+    pageTitle: 'Powłoka ceramiczna na samochód Łuków',
+    metaTitle: 'Powłoka Ceramiczna Łuków - Cena od 1000 zł, Gwarancja do 5 lat',
     metaDescription:
-      'Powłoki ceramiczne i elastomerowe w Łukowie. Gwarancja 36–60 miesięcy. Zabezpieczamy lakier, felgi, szyby i elementy plastikowe. Ceramic coating premium.',
+      'Powłoka ceramiczna na samochód w Łukowie. Cena od 1000 zł, gwarancja do 5 lat. Hydrofobowość, ochrona UV, głębia koloru. Zadzwoń: 782 195 321.',
     description:
       'Lakier samochodowy jest nieustannie wystawiony na próbę. Promieniowanie UV, kwaśne deszcze, sól drogowa czy ptasie odchody to codzienność, która niszczy strukturę karoserii. Aby zapewnić autu długotrwałą ochronę i podkreślić jego estetykę, w ShineCar w Łukowie oferujemy profesjonalną aplikację powłok ceramicznych. To rozwiązanie od lat uznawane za standard w detailingu premium, tworzące na samochodzie twardą, przezroczystą warstwę ochronną.',
     content: [
@@ -215,7 +215,7 @@ export const services: ServiceData[] = [
     ],
     sections: [
       {
-        heading: 'Dlaczego warto zainwestować w ceramikę na auto?',
+        heading: 'Powłoka ceramiczna na samochód - co daje i czy się opłaca?',
         paragraphs: ['Ceramika to nie wosk – to tarcza, która wnika w mikropory lakieru, tworząc z nim trwałe wiązanie chemiczne. Dzięki swojej unikalnej strukturze nadaje karoserii niesamowitą twardość i odporność na czynniki zewnętrzne. Wybierając powłokę w ShineCar, zyskujesz:'],
         bullets: [
           'Ochronę przed chemią i naturą: Ceramika minimalizuje ryzyko korozji oraz powstawania trwałych wżerów po ptasich odchodach czy owadach.',
@@ -226,7 +226,7 @@ export const services: ServiceData[] = [
         ],
       },
       {
-        heading: 'Profesjonalna aplikacja krok po kroku w naszym studio',
+        heading: 'Jak wygląda aplikacja powłoki ceramicznej krok po kroku?',
         paragraphs: ['W ShineCar proces zabezpieczania auta jest niezwykle precyzyjny i trwa zazwyczaj od 2 do 4 dni. Nie chodzimy na skróty, ponieważ trwałość powłoki zależy od przygotowania powierzchni.'],
         bullets: [
           'Mycie i dekontaminacja: Zaczynamy od dokładnego oczyszczenia lakieru z osadów metalicznych, smoły i innych zanieczyszczeń.',
@@ -236,7 +236,7 @@ export const services: ServiceData[] = [
         ],
       },
       {
-        heading: 'Zadbaj o swoje auto już dziś!',
+        heading: 'Powłoka ceramiczna w Łukowie i okolicach',
         paragraphs: [
           'Jeśli szukasz trwałego zabezpieczenia i chcesz, aby Twój samochód wyróżniał się na drogach w okolicach Siedlec, Radzynia Podlaskiego czy Międzyrzeca Podlaskiego – zapraszamy do kontaktu. W ShineCar w Łukowie dopasujemy najlepsze rozwiązanie do Twoich potrzeb.',
         ],
@@ -247,27 +247,32 @@ export const services: ServiceData[] = [
     image: serviceImage1,
     faq: [
       {
-        question: 'Co dokładnie obejmuje usługa aplikacji w ShineCar?',
+        question: 'Ile kosztuje powłoka ceramiczna na samochód?',
         answer:
-          'Nasza oferta to kompleksowy proces: od pełnej korekty lakieru, przez odtłuszczanie, aż po nałożenie warstw ochronnych. Całość kończy się wielogodzinnym utwardzaniem w optymalnej temperaturze, co zapewnia maksymalną hydrofobowość i trwałość.',
+          'Cena powłoki ceramicznej w ShineCar zaczyna się od 1000 zł i sięga do 2800 zł. Zależy od rozmiaru pojazdu, wybranego pakietu i tego, czy potrzebna jest wcześniejsza korekta lakieru.',
       },
       {
-        question: 'Ile czasu muszę zostawić samochód w studio?',
+        question: 'Jak długo trzyma powłoka ceramiczna?',
         answer:
-          'Standardowo proces trwa od 2 do 3 dni dla aut osobowych. W przypadku większych pojazdów, jak SUV-y czy vany, czas ten może wydłużyć się do 4-5 dni ze względu na większą powierzchnię i czas utwardzania.',
+          'Powłoka ceramiczna w zależności od pakietu utrzymuje się od 3 do 5 lat. Przy odpowiedniej pielęgnacji (mycie ręczne, unikanie myjni szczotkowych) trwałość może być jeszcze dłuższa.',
+      },
+      {
+        question: 'Czy powłoka ceramiczna się opłaca?',
+        answer:
+          'Tak. Powłoka ceramiczna chroni lakier przed UV, ptasimi odchodami, solą i chemią drogową. Ułatwia mycie, bo brud i woda spływają z powierzchni. Samochód dłużej wygląda jak nowy, co przekłada się też na wyższą wartość przy odsprzedaży.',
+      },
+      {
+        question: 'Ile trwa aplikacja powłoki ceramicznej?',
+        answer:
+          'Dla aut osobowych proces trwa 2-3 dni. W przypadku SUV-ów lub vanów może się wydłużyć do 4-5 dni ze względu na większą powierzchnię i czas utwardzania.',
       },
       {
         question: 'Czy powłoka ceramiczna zmienia kolor lakieru?',
         answer:
-          'Absolutnie nie. Ceramika jest w 100% przezroczysta. Jej zadaniem jest jedynie wyciągnięcie głębi koloru i nadanie efektu "szklistości", co sprawia, że auto wygląda na nowsze i bardziej zadbane.',
-      },
-      {
-        question: 'Czy aplikacja wymaga demontażu elementów?',
-        answer:
-          'W zależności od potrzeb i wybranego pakietu, możemy zdemontować drobne elementy (np. tablice rejestracyjne czy emblematy), aby precyzyjnie pokryć każdą szczelinę preparatem ochronnym.',
+          'Nie, ceramika jest w pełni przezroczysta. Wyciąga głębię koloru i nadaje efekt "mokrego" połysku, ale nie zmienia odcienia lakieru.',
       },
     ],
-    keywords: ['powłoki ceramiczne Łuków', 'ceramic coating', 'powłoka ceramiczna', 'zabezpieczenie lakieru'],
+    keywords: ['powłoka ceramiczna Łuków', 'powłoka ceramiczna cena', 'powłoka ceramiczna na samochód', 'ceramic coating Łuków', 'powłoka SiO2', 'ile kosztuje powłoka ceramiczna', 'powłoki ceramiczne Łuków', 'zabezpieczenie lakieru'],
   },
   {
     slug: 'powloki-elastomerowe',
@@ -587,6 +592,83 @@ export const services: ServiceData[] = [
       },
     ],
     keywords: ['mycie detailingowe Łuków', 'mycie premium samochodu', 'bezpieczne mycie auta'],
+  },
+  {
+    slug: 'odbior-auta-z-salonu',
+    title: 'Odbiór Auta z Salonu',
+    pageTitle: 'Odbiór nowego samochodu z salonu na lawecie | ShineCar Łuków',
+    metaTitle: 'Odbiór Auta z Salonu Łuków | Transport Lawetą i Oględziny',
+    metaDescription:
+      'Odbieramy Twoje nowe auto z salonu na profesjonalnej lawecie i transportujemy do naszego studia. Wspólne oględziny przy odbiorze. Zabezpieczenie od pierwszego kilometra.',
+    description:
+      'Kupujesz nowy samochód i chcesz go zabezpieczyć zanim przejdzie pierwszy kilometr po drogach publicznych? Przyjeżdżamy naszą lawetą do salonu, pomagamy przy oględzinach i transportujemy pojazd prosto do studia ShineCar w Świderkach koło Łukowa.',
+    content: [
+      'Twój nowy samochód nie musi spotykać się z odpryskami od kamieni, solą ani brudem. Trafia prosto na lawetę, a potem do studia, gdzie nakładamy folie PPF, powłoki ceramiczne lub elastomerowe. To najlepszy sposób na zachowanie salonowego stanu lakieru.',
+    ],
+    features: [
+      'Transport nowego auta na profesjonalnej lawecie',
+      'Pomoc przy odbiorze i wspólne oględziny w salonie',
+      'Weryfikacja stanu lakieru przed wyjazdem z salonu',
+      'Bezpośredni transport do studia ShineCar',
+      'Zabezpieczenie lakieru od pierwszego kilometra',
+      'Obsługa salonów w promieniu do 80 km od Łukowa',
+    ],
+    sections: [
+      {
+        heading: 'Jak wygląda odbiór auta z salonu?',
+        paragraphs: ['Cały proces jest prosty. Wystarczy umówić termin odbioru z salonem i przekazać nam szczegóły, a resztą zajmujemy się my.'],
+        bullets: [
+          'Umawiamy termin: Kontaktujesz się z nami i podajesz datę odbioru oraz adres salonu. Umawiamy się na wspólne oględziny lub odbieramy auto samodzielnie na Twoje zlecenie.',
+          'Jedziemy lawetą do salonu: Przyjeżdżamy naszą lawetą bezpośrednio pod salon samochodowy. Obsługujemy salony w promieniu do 80 km od Łukowa.',
+          'Wspólne oględziny przy odbiorze: Na miejscu pomagamy Ci dokładnie sprawdzić stan lakieru, ocenić ewentualne uszkodzenia transportowe i upewnić się, że auto opuszcza salon w idealnym stanie.',
+          'Transport na lawecie do studia: Po oględzinach ładujemy samochód na lawetę i bezpiecznie transportujemy do naszego studia w Świderkach. Auto nie pokonuje ani jednego kilometra po drogach publicznych.',
+          'Zabezpieczenie w studiu: Nakładamy wybrane zabezpieczenie, np. folię PPF, powłokę ceramiczną lub elastomerową. Auto wraca do Ciebie w pełni chronione.',
+        ],
+      },
+      {
+        heading: 'Dlaczego warto odebrać nowe auto na lawecie?',
+        paragraphs: ['Pierwszy przejazd z salonu do domu to moment, w którym lakier jest najbardziej narażony na uszkodzenia. Droga krajowa, autostrada czy nawet miejskie ulice pełne są kamieni, piasku i zanieczyszczeń, które zostawiają trwałe ślady na niezabezpieczonym lakierze.'],
+        bullets: [
+          'Zero kilometrów bez ochrony: Lakier nie spotyka się z odpryskami, solą ani brudem. Trafia prosto na lawetę.',
+          'Profesjonalne oględziny: Pomagamy wychwycić ewentualne wady fabryczne lub uszkodzenia transportowe, zanim podpiszesz protokół odbioru.',
+          'Spokój ducha: Wiesz, że Twoje nowe auto jest w rękach specjalistów od pierwszej minuty po zakupie.',
+          'Oszczędność czasu: Nie musisz sam jechać do salonu i z powrotem. Odbieramy auto i dostarczamy je zabezpieczone pod Twoje drzwi.',
+        ],
+      },
+      {
+        heading: 'Dla kogo jest ta usługa?',
+        paragraphs: [
+          'Usługa odbioru auta z salonu jest idealna dla właścicieli nowych samochodów, którzy planują zabezpieczenie lakieru folią PPF lub powłoką ochronną. Jest szczególnie popularna wśród klientów kupujących auta premium, leasingowe oraz pojazdy z indywidualnym zamówieniem, gdzie każdy detal ma znaczenie.',
+          'Obsługujemy salony w promieniu do 80 km od Łukowa, m.in. w Siedlcach, Lublinie i Białej Podlaskiej. Skontaktuj się z nami, a ustalimy szczegóły.',
+        ],
+      },
+    ],
+    price: 'Wycena indywidualna (zależy od odległości)',
+    duration: '1 dzień (odbiór + transport)',
+    image: serviceImage4,
+    faq: [
+      {
+        question: 'Z jak daleka możecie odebrać samochód z salonu?',
+        answer:
+          'Odbieramy auta z salonów w promieniu do 80 km od Łukowa, m.in. Siedlce, Lublin, Biała Podlaska. Dla dalszych lokalizacji skontaktuj się z nami po wycenę.',
+      },
+      {
+        question: 'Czy mogę być obecny przy odbiorze w salonie?',
+        answer:
+          'Tak, zachęcamy do wspólnych oględzin w salonie. Pomożemy sprawdzić stan lakieru i wychwycić ewentualne uszkodzenia transportowe przed podpisaniem protokołu odbioru.',
+      },
+      {
+        question: 'Ile kosztuje odbiór auta z salonu na lawecie?',
+        answer:
+          'Koszt transportu ustalamy indywidualnie, zależy od odległości do salonu. Skontaktuj się z nami po wycenę.',
+      },
+      {
+        question: 'Czy mogę od razu zamówić zabezpieczenie lakieru?',
+        answer:
+          'Tak, większość klientów łączy odbiór z salonu z pakietem zabezpieczenia (folia PPF, powłoka ceramiczna lub elastomerowa). Dzięki temu auto wraca do Ciebie w pełni chronione, bez dodatkowych wizyt.',
+      },
+    ],
+    keywords: ['odbiór auta z salonu', 'transport samochodu lawetą', 'odbiór nowego samochodu Łuków', 'oględziny samochodu w salonie'],
   },
 ];
 
