@@ -177,13 +177,19 @@ const Header = () => {
           </nav>
 
           {/* Contact CTA */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-4">
             <a href="tel:+48782195321" className="flex items-center space-x-3 text-sm hover:text-primary transition-colors">
               <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
                 <Phone className="w-4 h-4 text-primary" />
               </div>
               <span className="text-foreground font-medium">+48 782 195 321</span>
             </a>
+            <Link
+              href="/wycena"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-5 py-2.5 rounded-lg text-sm transition-colors"
+            >
+              Wycena Folii PPF i Powłok
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -271,14 +277,23 @@ const Header = () => {
                   <Phone className="w-4 h-4 text-primary" />
                   <span className="text-foreground font-medium">+48 782 195 321</span>
                 </a>
-                <Button
-                  variant="default"
-                  size="default"
-                  onClick={() => scrollToSection('contact')}
-                  className="w-full"
-                >
-                  Umów wizytę
-                </Button>
+                <div className="flex gap-3">
+                  <Link
+                    href="/wycena"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex-1 text-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-4 py-2.5 rounded-lg text-sm transition-colors"
+                  >
+                    Wycena Folii PPF i Powłok
+                  </Link>
+                  <Button
+                    variant="default"
+                    size="default"
+                    onClick={() => scrollToSection('contact')}
+                    className="flex-1"
+                  >
+                    Umów wizytę
+                  </Button>
+                </div>
               </div>
             </nav>
           </div>
