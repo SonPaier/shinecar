@@ -136,7 +136,7 @@ const Footer = () => {
               <span>Właściciel: Marcin Przybysławski</span>
             </div>
           </div>
-          <div className="text-left text-xl text-muted-foreground mt-6 font-luxury">
+          <div className="text-left text-sm text-muted-foreground mt-6 font-luxury">
             Stworzone z miłością i pomocą{' '}
             <a href="https://carfect.pl" target="_blank" rel="noopener" className="text-primary hover:text-primary/80 transition-colors">
               carfect.pl
