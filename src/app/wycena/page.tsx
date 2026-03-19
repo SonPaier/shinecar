@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
+import CarfectEmbed from '@/components/CarfectEmbed';
 
 export const metadata: Metadata = {
   title: 'Wycena Folii PPF i Powłok Ceramicznych — ShineCar Łuków',
@@ -33,14 +34,7 @@ export default function WycenaPage() {
           </p>
         </div>
         <div className="flex justify-center px-6 py-4">
-          <iframe
-            src="https://shinecar.carfect.pl/embed"
-            width="100%"
-            height={1200}
-            frameBorder="0"
-            style={{ border: 'none', borderRadius: '8px', maxWidth: '960px' }}
-            title="Formularz wyceny folii PPF i powłok ceramicznych"
-          />
+          <CarfectEmbed />
         </div>
       </main>
     </>
