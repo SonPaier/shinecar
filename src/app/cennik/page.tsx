@@ -305,12 +305,13 @@ export default function CennikPage() {
                     <Phone className="w-4 h-4" />
                     +48 782 195 321
                   </a>
-                  <Link
-                    href="/wycena"
+                  <a
+                    href="mailto:shinecarkosmetyka@o2.pl"
                     className="flex items-center gap-2 px-6 py-3 border border-border rounded-full text-foreground hover:border-primary transition-colors"
                   >
-                    Wycena online →
-                  </Link>
+                    <Mail className="w-4 h-4" />
+                    shinecarkosmetyka@o2.pl
+                  </a>
                 </div>
               </div>
 
