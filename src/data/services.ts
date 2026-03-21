@@ -12,7 +12,9 @@ export interface ServiceSection {
 
 export interface ServiceData {
   slug: string;
+  urlSlug: string;
   title: string;
+  navTitle?: string;
   pageTitle?: string;
   metaTitle: string;
   metaDescription: string;
@@ -35,7 +37,9 @@ const serviceImage4 = 'https://cdn.builder.io/api/v1/image/assets%2Fa59c3b14b9b7
 export const services: ServiceData[] = [
   {
     slug: 'folie-ppf',
+    urlSlug: 'folia-ppf-lukow',
     title: 'Folie Ochronne PPF',
+    navTitle: 'Folia PPF',
     pageTitle: 'Folie Ochronne PPF Łuków – Detailing Klasy Premium',
     metaTitle: 'Folie Ochronne PPF Łuków — Bezbarwna Ochrona Lakieru',
     metaDescription:
@@ -123,6 +127,8 @@ export const services: ServiceData[] = [
   },
   {
     slug: 'korekta-lakieru',
+    urlSlug: 'korekta-lakieru-lukow',
+    navTitle: 'Korekta lakieru',
     title: 'Korekta Lakieru',
     pageTitle: 'Profesjonalna Renowacja i Korekta Lakieru w ShineCar',
     metaTitle: 'Korekta Lakieru Łuków — Polerowanie i Usuwanie Rys',
@@ -195,6 +201,8 @@ export const services: ServiceData[] = [
   },
   {
     slug: 'powloki-ceramiczne',
+    urlSlug: 'powloka-ceramiczna-lukow',
+    navTitle: 'Powłoka ceramiczna',
     title: 'Powłoki Ceramiczne',
     pageTitle: 'Powłoka ceramiczna na samochód Łuków',
     metaTitle: 'Powłoka Ceramiczna Łuków - Cena od 1000 zł, Gwarancja do 5 lat',
@@ -276,6 +284,8 @@ export const services: ServiceData[] = [
   },
   {
     slug: 'powloki-elastomerowe',
+    urlSlug: 'powloka-elastomerowa-lukow',
+    navTitle: 'Powłoka elastomerowa',
     title: 'Powłoki Elastomerowe',
     pageTitle: 'Powłoka elastomerowa Łuków – Nowa era ochrony lakieru w ShineCar',
     metaTitle: 'Powłoki Elastomerowe Łuków — Najtrwalsza Ochrona Lakieru',
@@ -353,6 +363,8 @@ export const services: ServiceData[] = [
   },
   {
     slug: 'detailing-wnetrza',
+    urlSlug: 'detailing-wnetrza-lukow',
+    navTitle: 'Detailing wnętrza',
     title: 'Detailing Wnętrza',
     pageTitle: 'Detailing i profesjonalna pielęgnacja samochodów w ShineCar',
     metaTitle: 'Detailing Wnętrza Łuków — Profesjonalne Czyszczenie Samochodu',
@@ -446,6 +458,8 @@ export const services: ServiceData[] = [
   },
   {
     slug: 'folie-kolorowe-ppf',
+    urlSlug: 'folia-kolorowa-ppf-lukow',
+    navTitle: 'Folia kolorowa PPF',
     title: 'Folie Kolorowe PPF',
     pageTitle: 'Zmiana koloru auta folią PPF w ShineCar – Styl i Ochrona w Jednym',
     metaTitle: 'Folie Kolorowe PPF Łuków — Zmiana Koloru Folią Ochronną',
@@ -519,7 +533,9 @@ export const services: ServiceData[] = [
   },
   {
     slug: 'mycie-detailingowe',
+    urlSlug: 'mycie-detailingowe-lukow',
     title: 'Mycie Detailingowe',
+    navTitle: 'Mycie detailingowe',
     pageTitle: 'Mycie detailingowe w ShineCar – Nowy standard czystości Twojego auta',
     metaTitle: 'Mycie Detailingowe Łuków — Premium Mycie Samochodu',
     metaDescription:
@@ -595,6 +611,8 @@ export const services: ServiceData[] = [
   },
   {
     slug: 'odbior-auta-z-salonu',
+    urlSlug: 'odbior-auta-z-salonu-lukow',
+    navTitle: 'Odbiór auta z salonu',
     title: 'Odbiór Auta z Salonu',
     pageTitle: 'Odbiór nowego samochodu z salonu na lawecie | ShineCar Łuków',
     metaTitle: 'Odbiór Auta z Salonu Łuków | Transport Lawetą i Oględziny',
@@ -670,12 +688,214 @@ export const services: ServiceData[] = [
     ],
     keywords: ['odbiór auta z salonu', 'transport samochodu lawetą', 'odbiór nowego samochodu Łuków', 'oględziny samochodu w salonie'],
   },
+  {
+    slug: 'myjnia-reczna',
+    urlSlug: 'myjnia-reczna-lukow',
+    title: 'Myjnia Ręczna',
+    navTitle: 'Myjnia ręczna',
+    pageTitle: 'Myjnia Ręczna Łuków — Bezpieczne Mycie Samochodu w ShineCar',
+    metaTitle: 'Myjnia Ręczna Łuków — Bezpieczne Mycie Samochodu od 250 zł',
+    metaDescription:
+      'Profesjonalna myjnia ręczna w Łukowie. Metoda Two Bucket Wash — zero rys, pełna czystość. Bezpieczne mycie samochodów z folią PPF i powłoką ceramiczną. Zadzwoń: 782 195 321.',
+    description:
+      'Myjnia automatyczna i bezdotykowa rysują lakier — to fakt, którego nie da się obejść. W ShineCar w Łukowie oferujemy profesjonalne mycie ręczne metodą Two Bucket Wash, która gwarantuje bezpieczeństwo lakieru przy każdym myciu. Nasz proces eliminuje ryzyko mikrozarysowań, które z czasem matowią nawet najdroższy lakier.',
+    content: [
+      'Jeśli szukasz myjni ręcznej w Łukowie, która zadba o Twój samochód tak, jak na to zasługuje — zapraszamy do naszego studia w Świderkach. Obsługujemy klientów z Łukowa, Siedlec, Radzynia Podlaskiego i okolic.',
+    ],
+    features: [
+      'Metoda Two Bucket Wash — zero przenoszenia brudu',
+      'Aktywna piana o neutralnym pH',
+      'Bezpieczne dla folii PPF i powłok ceramicznych',
+      'Ręczne suszenie mikrofibrą',
+      'Czyszczenie felg, uszczelek i detali',
+      'Opcjonalna dekontaminacja i quick detailer',
+    ],
+    sections: [
+      {
+        heading: 'Czym jest metoda Two Bucket Wash?',
+        paragraphs: [
+          'Two Bucket Wash to złoty standard bezpiecznego mycia samochodu. Polega na użyciu dwóch oddzielnych wiader — jednego z czystą wodą i środkiem myjącym, drugiego do płukania rękawicy. Dzięki separatorom brudu na dnie wiader zanieczyszczenia opadają i nie wracają na lakier.',
+          'W przeciwieństwie do myjni automatycznych i bezdotykowych, metoda ta eliminuje mikrozarysowania, które z czasem tworzą charakterystyczną „pajęczynę" widoczną w świetle słonecznym.',
+        ],
+      },
+      {
+        heading: 'Jak wygląda proces mycia ręcznego w ShineCar?',
+        bullets: [
+          'Spłukanie wstępne — usuwamy luźny brud i piasek myjką ciśnieniową.',
+          'Aktywna piana — nakładamy pianę o neutralnym pH, która rozpuszcza zabrudzenia bez kontaktu z lakierem.',
+          'Mycie kontaktowe — rękawicą z mikrofibry myczymy każdy panel metodą Two Bucket Wash.',
+          'Felgi i detale — czyścimy felgi, wnęki klamek, uszczelki, emblematy i grille dedykowanymi pędzelkami.',
+          'Płukanie i suszenie — spłukujemy auto zdemineralizowaną wodą i suszymy miękkimi ręcznikami waflowymi oraz sprężonym powietrzem.',
+        ],
+      },
+      {
+        heading: 'Myjnia ręczna vs. myjnia automatyczna — dlaczego warto?',
+        paragraphs: [
+          'Myjnia automatyczna ze szczotkami to najszybszy sposób na zarysowanie lakieru. Bezdotykowa jest lepsza, ale nie usuwa zapieczonych zabrudzeń i pozostawia zacieki. Mycie ręczne w studiu detailingowym to jedyna metoda, która łączy dokładność z bezpieczeństwem.',
+        ],
+        bullets: [
+          'Myjnia automatyczna: szybka, tania, ale rysuje lakier szczotkami nasączonymi piaskiem z poprzednich aut.',
+          'Myjnia bezdotykowa: bezpieczniejsza, ale nie usuwa trudnych zabrudzeń (asfalt, żywica, odchody ptaków).',
+          'Myjnia ręczna ShineCar: najwyższy poziom bezpieczeństwa i czystości, idealna dla aut z folią PPF lub powłoką ceramiczną.',
+        ],
+      },
+      {
+        heading: 'Dla kogo jest myjnia ręczna?',
+        paragraphs: [
+          'Myjnia ręczna to idealne rozwiązanie dla właścicieli samochodów, którym zależy na utrzymaniu lakieru w idealnym stanie. Szczególnie polecamy ją posiadaczom aut z folią PPF, powłoką ceramiczną lub elastomerową — bezpieczne mycie przedłuża żywotność zabezpieczeń.',
+          'Zapraszamy właścicieli aut premium, klasyków oraz wszystkich, którzy chcą dbać o swój samochód na najwyższym poziomie. Studio ShineCar mieści się w Świderkach k. Łukowa.',
+        ],
+      },
+    ],
+    price: 'od 250 zł',
+    duration: '1–1,5 godziny',
+    image: serviceImage1,
+    faq: [
+      {
+        question: 'Ile kosztuje mycie ręczne samochodu?',
+        answer:
+          'Cena mycia ręcznego zaczyna się od 250 zł. Finalna cena zależy od wielkości pojazdu i stopnia zabrudzenia. Pakiet z dekontaminacją i quick detailerem to ok. 400 zł.',
+      },
+      {
+        question: 'Czy mycie ręczne jest bezpieczne dla folii PPF?',
+        answer:
+          'Tak — metoda Two Bucket Wash jest rekomendowana przez producentów folii PPF. Używamy wyłącznie neutralnych środków i miękkich rękawic z mikrofibry.',
+      },
+      {
+        question: 'Jak często powinienem myć auto ręcznie?',
+        answer:
+          'Zalecamy mycie co 2–4 tygodnie, w zależności od warunków eksploatacji. Auta z powłoką ceramiczną mogą być myte rzadziej dzięki właściwościom hydrofobowym.',
+      },
+      {
+        question: 'Czy mogę umówić się tylko na mycie ręczne?',
+        answer:
+          'Tak — mycie ręczne jest dostępne jako samodzielna usługa. Możesz też połączyć je z innymi zabiegami, takimi jak aplikacja quick detailera, wosku lub serwis powłoki.',
+      },
+      {
+        question: 'Czym różni się mycie ręczne od mycia detailingowego?',
+        answer:
+          'Mycie ręczne to sam proces mycia metodą Two Bucket Wash. Mycie detailingowe dodatkowo obejmuje dekontaminację lakieru, czyszczenie komory silnika oraz pełne dopieszczenie detali.',
+      },
+    ],
+    keywords: ['myjnia ręczna Łuków', 'mycie ręczne samochodu Łuków', 'myjnia ręczna', 'bezpieczne mycie samochodu', 'two bucket wash Łuków'],
+  },
+  {
+    slug: 'pranie-tapicerki',
+    urlSlug: 'pranie-tapicerki-lukow',
+    title: 'Pranie Tapicerki Samochodowej',
+    navTitle: 'Pranie tapicerki',
+    pageTitle: 'Pranie Tapicerki Samochodowej Łuków — Czyszczenie Tapicerek i Skór',
+    metaTitle: 'Pranie Tapicerki Samochodowej Łuków — Czyszczenie Tapicerek i Skór od 350 zł',
+    metaDescription:
+      'Profesjonalne pranie tapicerki samochodowej w Łukowie. Czyszczenie tapicerki materiałowej, skórzanej i alcantary. Usuwanie plam, zapachów i alergenów. ShineCar Łuków.',
+    description:
+      'Tapicerka samochodowa zbiera brud, kurz, alergeny i nieprzyjemne zapachy szybciej, niż myślisz. W ShineCar w Łukowie oferujemy profesjonalne pranie tapicerki ekstrakcyjne, które przywraca wnętrzu samochodu świeżość i czystość na poziomie salonowym. Obsługujemy tapicerki materiałowe, skórzane oraz alcantarę.',
+    content: [
+      'Niezależnie od tego, czy chcesz odświeżyć wnętrze po zimie, usunąć uporczywe plamy, czy przygotować auto do sprzedaży — nasze studio w Świderkach k. Łukowa jest gotowe pomóc. Obsługujemy klientów z Łukowa, Siedlec, Radzynia Podlaskiego i okolic.',
+    ],
+    features: [
+      'Pranie ekstrakcyjne tapicerki materiałowej',
+      'Czyszczenie i impregnacja skóry naturalnej',
+      'Czyszczenie alcantary',
+      'Usuwanie plam i zapachów',
+      'Dezynfekcja i usuwanie alergenów',
+      'Impregnacja po czyszczeniu',
+    ],
+    sections: [
+      {
+        heading: 'Kiedy warto wyprać tapicerkę samochodową?',
+        paragraphs: [
+          'Tapicerka materiałowa wchłania zabrudzenia jak gąbka — kurz, pot, resztki jedzenia, sierść zwierząt i rozlane napoje wnikają głęboko w tkaninę. Regularne odkurzanie nie wystarczy, by usunąć bakterie i alergeny, które gromadzą się w fotelach i dywanikach.',
+        ],
+        bullets: [
+          'Widoczne plamy na fotelach lub dywanikach',
+          'Nieprzyjemny zapach we wnętrzu',
+          'Po zimie — sól, błoto i wilgoć osadzają się głęboko w tapicerce',
+          'Przed sprzedażą samochodu — czyste wnętrze podnosi wartość',
+          'Alergie — regularne pranie usuwa roztocza, pyłki i sierść zwierząt',
+        ],
+      },
+      {
+        heading: 'Czyszczenie tapicerki materiałowej vs. skórzanej',
+        paragraphs: [
+          'Każdy typ tapicerki wymaga innego podejścia. Tapicerkę materiałową pierzemy metodą ekstrakcyjną (wtrysk-odsysanie), która głęboko penetruje włókna i usuwa brud z ich wnętrza. Skóra naturalna wymaga delikatniejszych środków — czyścimy ją specjalistyczną chemią i nakładamy odżywkę, która nawilża i chroni przed pękaniem.',
+        ],
+        bullets: [
+          'Tapicerka materiałowa: pranie ekstrakcyjne + impregnacja hydrofobowa',
+          'Skóra naturalna: czyszczenie + odżywienie + impregnacja ceramiczna',
+          'Alcantara: delikatne czyszczenie parą lub chemią dedykowaną do zamszów',
+          'Podsufitka: czyszczenie ręczne, bez nasączania — zapobiegamy odklejeniu materiału',
+        ],
+      },
+      {
+        heading: 'Proces prania tapicerki w ShineCar',
+        bullets: [
+          'Odkurzanie — usuwamy luźny brud, piasek i okruchy z każdej szczeliny.',
+          'Aplikacja środka czyszczącego — wmasowujemy profesjonalną chemię w tapicerkę pędzelkami i szczotkami.',
+          'Pranie ekstrakcyjne — wtryskujemy czystą wodę pod ciśnieniem i natychmiast odsysamy razem z brudem.',
+          'Suszenie — przyspieszamy schnięcie za pomocą dmuchaw i ozonowania, co jednocześnie dezynfekuje wnętrze.',
+          'Impregnacja — nakładamy powłokę hydrofobową, która chroni tapicerkę przed przyszłymi zabrudzeniami.',
+        ],
+      },
+      {
+        heading: 'Błędy przy samodzielnym praniu tapicerki',
+        paragraphs: [
+          'Wiele osób próbuje czyścić tapicerkę domowymi sposobami, co często przynosi więcej szkody niż pożytku. Oto najczęstsze błędy:',
+        ],
+        bullets: [
+          'Używanie zbyt dużej ilości wody — tapicerka nasiąka i zaczyna pleśnieć.',
+          'Silne detergenty — mogą odbarwić materiał lub uszkodzić skórę.',
+          'Brak suszenia — wilgotna tapicerka to idealne środowisko dla grzybów i bakterii.',
+          'Szorowanie podsufitki — materiał się odkleja od podkładu piankowego.',
+        ],
+        tip: 'Jeśli plama jest świeża, delikatnie ją wchłoń ręcznikiem papierowym — nie wcieraj! Potem umów się na profesjonalne czyszczenie.',
+      },
+    ],
+    price: 'od 350 zł',
+    duration: '3–5 godzin (z suszeniem)',
+    image: serviceImage2,
+    faq: [
+      {
+        question: 'Ile kosztuje pranie tapicerki samochodowej?',
+        answer:
+          'Cena prania tapicerki materiałowej zaczyna się od 350 zł. Czyszczenie i impregnacja skóry naturalnej to koszt od 300 zł. Finalna cena zależy od wielkości pojazdu i stopnia zabrudzenia.',
+      },
+      {
+        question: 'Jak długo schnie tapicerka po praniu?',
+        answer:
+          'Tapicerka materiałowa schnie ok. 4–8 godzin po praniu ekstrakcyjnym. Przyspieszamy proces za pomocą dmuchaw i ozonowania. W ciepłych miesiącach schnięcie może być szybsze.',
+      },
+      {
+        question: 'Czy możecie usunąć zapach dymu papierosowego?',
+        answer:
+          'Tak — pranie ekstrakcyjne w połączeniu z ozonowaniem skutecznie redukuje zapach dymu. W przypadku intensywnego zadymienia może być potrzebna powtórka lub dodatkowe zabiegi.',
+      },
+      {
+        question: 'Czy pranie tapicerki jest bezpieczne dla podgrzewanych foteli?',
+        answer:
+          'Tak — metoda ekstrakcyjna jest bezpieczna dla foteli z ogrzewaniem i wentylacją. Kontrolujemy ilość wody i ciśnienie, aby nie uszkodzić instalacji.',
+      },
+    ],
+    keywords: ['pranie tapicerki samochodowej Łuków', 'czyszczenie tapicerki Łuków', 'pranie tapicerki', 'czyszczenie skóry samochodowej', 'pranie foteli samochodowych Łuków'],
+  },
 ];
 
 export function getServiceBySlug(slug: string): ServiceData | undefined {
   return services.find((s) => s.slug === slug);
 }
 
+export function getServiceByUrlSlug(urlSlug: string): ServiceData | undefined {
+  return services.find((s) => s.urlSlug === urlSlug);
+}
+
 export function getAllServiceSlugs(): string[] {
   return services.map((s) => s.slug);
+}
+
+export function getAllServiceUrlSlugs(): string[] {
+  return services.map((s) => s.urlSlug);
+}
+
+export function getServiceUrl(service: ServiceData): string {
+  return `/${service.urlSlug}`;
 }

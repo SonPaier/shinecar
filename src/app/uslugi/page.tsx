@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { services } from '@/data/services';
+import { services, getServiceUrl } from '@/data/services';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 
@@ -38,7 +38,7 @@ const itemListJsonLd = {
     '@type': 'ListItem',
     position: i + 1,
     name: s.title,
-    url: `https://shinecar.pl/uslugi/${s.slug}`,
+    url: `https://shinecar.pl${getServiceUrl(s)}`,
   })),
 };
 
@@ -72,7 +72,7 @@ export default function UslugiPage() {
             {services.map((service) => (
               <Link
                 key={service.slug}
-                href={`/uslugi/${service.slug}`}
+                href={getServiceUrl(service)}
                 className="group border border-border rounded-2xl overflow-hidden bg-gradient-glass backdrop-blur-sm hover:border-primary/50 transition-colors"
               >
                 <div className="h-48 overflow-hidden relative">

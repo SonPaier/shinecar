@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
+import FaqJsonLd from '@/components/seo/FaqJsonLd';
 import { Phone, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -48,6 +50,25 @@ interface PricingCategory {
   subtitle?: string;
   items: PricingItem[];
 }
+
+const cennikFaq = [
+  {
+    question: 'Czy ceny zawierają VAT?',
+    answer: 'Podane ceny są cenami netto. Do każdej usługi doliczany jest podatek VAT zgodnie z obowiązującymi przepisami.',
+  },
+  {
+    question: 'Od czego zależy finalna cena usługi?',
+    answer: 'Cena zależy od rozmiaru pojazdu, stanu lakieru, wybranego zakresu prac oraz użytych materiałów. Np. folia PPF na SUV-a będzie droższa niż na hatchbacka ze względu na większą powierzchnię.',
+  },
+  {
+    question: 'Czy oferujecie rabaty dla stałych klientów?',
+    answer: 'Tak, stali klienci mogą liczyć na preferencyjne warunki cenowe. Oferujemy również pakiety łączone (np. korekta + powłoka) w atrakcyjnych cenach.',
+  },
+  {
+    question: 'Jakie formy płatności akceptujecie?',
+    answer: 'Akceptujemy gotówkę oraz przelew bankowy. Przy większych zleceniach możliwa jest płatność w ratach — zapytaj o szczegóły.',
+  },
+];
 
 const pricingData: PricingCategory[] = [
   {
@@ -219,6 +240,7 @@ export default function CennikPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <FaqJsonLd items={cennikFaq} />
 
         <section className="py-32 bg-background">
           <div className="container mx-auto px-6">
@@ -250,14 +272,30 @@ export default function CennikPage() {
                 ))}
               </div>
 
+              {/* FAQ */}
+              <div className="mt-16 space-y-6">
+                <h2 className="font-luxury text-3xl text-foreground text-center">
+                  Najczęściej zadawane pytania o ceny
+                </h2>
+                <div className="space-y-4 max-w-3xl mx-auto">
+                  {cennikFaq.map((item, i) => (
+                    <div key={i} className="border border-border rounded-xl p-5">
+                      <h3 className="font-semibold text-foreground mb-2">{item.question}</h3>
+                      <p className="text-muted-foreground text-sm">{item.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA */}
               <div className="mt-12 border border-border rounded-2xl bg-gradient-glass p-8 text-center space-y-4">
                 <h2 className="text-2xl font-semibold text-foreground">
                   Potrzebujesz indywidualnej wyceny?
                 </h2>
                 <p className="text-muted-foreground max-w-xl mx-auto">
                   Ceny są orientacyjne i zależą od rozmiaru pojazdu, stanu
-                  lakieru oraz zakresu prac. Skontaktuj się z nami, aby otrzymać
-                  dokładną wycenę.
+                  lakieru oraz zakresu prac. Skontaktuj się z nami lub skorzystaj
+                  z <Link href="/wycena" className="text-primary hover:underline">kalkulatora wycen online</Link>.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
                   <a
@@ -267,13 +305,12 @@ export default function CennikPage() {
                     <Phone className="w-4 h-4" />
                     +48 782 195 321
                   </a>
-                  <a
-                    href="mailto:shinecarkosmetyka@o2.pl"
+                  <Link
+                    href="/wycena"
                     className="flex items-center gap-2 px-6 py-3 border border-border rounded-full text-foreground hover:border-primary transition-colors"
                   >
-                    <Mail className="w-4 h-4" />
-                    shinecarkosmetyka@o2.pl
-                  </a>
+                    Wycena online →
+                  </Link>
                 </div>
               </div>
 

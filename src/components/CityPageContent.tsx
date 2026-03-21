@@ -4,15 +4,19 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
-import { services } from '@/data/services';
+import { services, getServiceUrl } from '@/data/services';
 import type { CityData } from '@/data/cities';
-import { Phone, Mail, ArrowRight, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, ArrowRight, MapPin, Clock, CheckCircle } from 'lucide-react';
 
 const cityDeclensions: Record<string, { locative: string; genitive: string }> = {
   'Łuków': { locative: 'Łukowie', genitive: 'Łukowa' },
   'Siedlce': { locative: 'Siedlcach', genitive: 'Siedlec' },
   'Międzyrzec Podlaski': { locative: 'Międzyrzecu Podlaskim', genitive: 'Międzyrzeca Podlaskiego' },
   'Radzyń Podlaski': { locative: 'Radzyniu Podlaskim', genitive: 'Radzynia Podlaskiego' },
+  'Garwolin': { locative: 'Garwolinie', genitive: 'Garwolina' },
+  'Biała Podlaska': { locative: 'Białej Podlaskiej', genitive: 'Białej Podlaskiej' },
+  'Ryki': { locative: 'Rykach', genitive: 'Ryk' },
+  'Lubartów': { locative: 'Lubartowie', genitive: 'Lubartowa' },
 };
 
 export default function CityPageContent({ city }: { city: CityData }) {
@@ -63,7 +67,7 @@ export default function CityPageContent({ city }: { city: CityData }) {
                   {services.map((service) => (
                     <Link
                       key={service.slug}
-                      href={`/uslugi/${service.slug}`}
+                      href={getServiceUrl(service)}
                       className="group border border-border rounded-2xl overflow-hidden bg-gradient-glass backdrop-blur-sm hover:border-primary/50 transition-colors"
                     >
                       <div className="h-40 overflow-hidden relative">
@@ -92,6 +96,40 @@ export default function CityPageContent({ city }: { city: CityData }) {
                   ))}
                 </div>
               </div>
+
+              {/* Dlaczego ShineCar */}
+              {city.whyUs && city.whyUs.length > 0 && (
+                <div className="space-y-6 mb-16">
+                  <h2 className="font-luxury text-3xl text-foreground text-center">
+                    Dlaczego klienci z {declension.genitive} wybierają ShineCar?
+                  </h2>
+                  <ul className="space-y-4 max-w-3xl mx-auto">
+                    {city.whyUs.map((reason, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground text-lg">{reason}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* FAQ */}
+              {city.faq && city.faq.length > 0 && (
+                <div className="space-y-6 mb-16">
+                  <h2 className="font-luxury text-3xl text-foreground text-center">
+                    Najczęściej zadawane pytania — {city.name}
+                  </h2>
+                  <div className="space-y-4 max-w-3xl mx-auto">
+                    {city.faq.map((item, i) => (
+                      <div key={i} className="border border-border rounded-xl p-5">
+                        <h3 className="font-semibold text-foreground mb-2">{item.question}</h3>
+                        <p className="text-muted-foreground text-sm">{item.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="border border-border rounded-2xl bg-gradient-glass p-8 text-center space-y-4">
                 <h2 className="text-2xl font-semibold text-foreground">

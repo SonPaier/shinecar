@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import { X } from 'lucide-react';
 
 
@@ -154,11 +155,11 @@ export default function GaleriaPage() {
     if (item.description) return item.description;
     if (item.title) return item.title;
     const categoryAlts: Record<Photo['category'], string> = {
-      'Folie PPF': 'Realizacja oklejenia folią ochronną PPF',
-      'Korekta Lakieru': 'Realizacja korekty lakieru',
-      'Detailing Wnętrza': 'Realizacja detailingu wnętrza samochodu',
+      'Folie PPF': 'Folia ochronna PPF — oklejenie samochodu',
+      'Korekta Lakieru': 'Korekta lakieru — polerowanie i usuwanie rys',
+      'Detailing Wnętrza': 'Detailing wnętrza — czyszczenie i pielęgnacja kabiny',
     };
-    return `${categoryAlts[item.category]} nr ${index + 1} — ShineCar Łuków`;
+    return `${categoryAlts[item.category]}, realizacja ${index + 1} | ShineCar Łuków`;
   };
 
   return (
@@ -168,9 +169,17 @@ export default function GaleriaPage() {
         <section id="galeria-top" className="py-32 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-7xl mx-auto">
+              <div className="mb-6">
+                <Breadcrumbs
+                  items={[
+                    { name: 'Strona główna', href: '/' },
+                    { name: 'Realizacje' },
+                  ]}
+                />
+              </div>
               <div className="text-center space-y-6 mb-8">
                 <div className="h-1 w-16 bg-primary rounded-full mx-auto" />
-                <h1 className="font-luxury text-4xl lg:text-5xl text-foreground">Galeria Realizacji — Detailing Łuków</h1>
+                <h1 className="font-luxury text-4xl lg:text-5xl text-foreground">Realizacje Detailingu Samochodowego — Łuków</h1>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Wybierz kategorię, aby przeglądać realizacje.</p>
               </div>
 

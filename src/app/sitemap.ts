@@ -1,14 +1,14 @@
 import type { MetadataRoute } from 'next';
-import { getAllServiceSlugs } from '@/data/services';
+import { getAllServiceUrlSlugs } from '@/data/services';
 import { getAllCitySlugs } from '@/data/cities';
 import { getAllBlogSlugs } from '@/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://shinecar.pl';
-  const now = new Date('2026-03-01');
+  const now = new Date();
 
-  const servicePages = getAllServiceSlugs().map((slug) => ({
-    url: `${base}/uslugi/${slug}`,
+  const servicePages = getAllServiceUrlSlugs().map((urlSlug) => ({
+    url: `${base}/${urlSlug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.9,
@@ -42,13 +42,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${base}/oferta`,
+      url: `${base}/wycena`,
       lastModified: now,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.7,
     },
     {
-      url: `${base}/galeria`,
+      url: `${base}/realizacje-detailing-lukow`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
