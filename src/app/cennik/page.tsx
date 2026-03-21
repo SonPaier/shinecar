@@ -66,7 +66,7 @@ const cennikFaq = [
   },
   {
     question: 'Jakie formy płatności akceptujecie?',
-    answer: 'Akceptujemy gotówkę oraz przelew bankowy. Przy większych zleceniach możliwa jest płatność w ratach — zapytaj o szczegóły.',
+    answer: 'Akceptujemy gotówkę oraz przelew bankowy.',
   },
 ];
 
