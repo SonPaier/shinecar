@@ -205,9 +205,9 @@ export const services: ServiceData[] = [
     navTitle: 'Powłoka ceramiczna',
     title: 'Powłoki Ceramiczne',
     pageTitle: 'Powłoka ceramiczna na samochód Łuków',
-    metaTitle: 'Powłoka Ceramiczna Łuków - Cena od 1000 zł, Gwarancja do 5 lat',
+    metaTitle: 'Powłoka Ceramiczna Łuków — Cena od 1000 zł | ShineCar',
     metaDescription:
-      'Powłoka ceramiczna na samochód w Łukowie. Cena od 1000 zł, gwarancja do 5 lat. Hydrofobowość, ochrona UV, głębia koloru. Zadzwoń: 782 195 321.',
+      'Powłoka ceramiczna na samochód w Łukowie. Cena od 1000 zł. Hydrofobowość, ochrona UV, głębia koloru. Zadzwoń: 782 195 321.',
     description:
       'Lakier samochodowy jest nieustannie wystawiony na próbę. Promieniowanie UV, kwaśne deszcze, sól drogowa czy ptasie odchody to codzienność, która niszczy strukturę karoserii. Aby zapewnić autu długotrwałą ochronę i podkreślić jego estetykę, w ShineCar w Łukowie oferujemy profesjonalną aplikację powłok ceramicznych. To rozwiązanie od lat uznawane za standard w detailingu premium, tworzące na samochodzie twardą, przezroczystą warstwę ochronną.',
     content: [
@@ -262,7 +262,7 @@ export const services: ServiceData[] = [
       {
         question: 'Jak długo trzyma powłoka ceramiczna?',
         answer:
-          'Powłoka ceramiczna w zależności od pakietu utrzymuje się od 3 do 5 lat. Przy odpowiedniej pielęgnacji (mycie ręczne, unikanie myjni szczotkowych) trwałość może być jeszcze dłuższa.',
+          'Trwałość powłoki ceramicznej zależy od pakietu i pielęgnacji. Przy odpowiednim myciu (ręczne, unikanie myjni szczotkowych) powłoka utrzymuje się znacznie dłużej.',
       },
       {
         question: 'Czy powłoka ceramiczna się opłaca?',
@@ -290,7 +290,7 @@ export const services: ServiceData[] = [
     pageTitle: 'Powłoka elastomerowa Łuków – Nowa era ochrony lakieru w ShineCar',
     metaTitle: 'Powłoki Elastomerowe Łuków — Najtrwalsza Ochrona Lakieru',
     metaDescription:
-      'Powłoki elastomerowe w Łukowie. Samoregeneracja, totalna hydrofobowość i gwarancja do 7 lat. Technologia przewyższająca klasyczną ceramikę. ShineCar Łuków.',
+      'Powłoki elastomerowe w Łukowie. Samoregeneracja, totalna hydrofobowość. Technologia przewyższająca klasyczną ceramikę. ShineCar Łuków.',
     description:
       'Szukasz ochrony, która potrafi więcej niż klasyczna ceramika? W ShineCar Łuków wprowadzamy technologię przyszłości – powłoki elastomerowe. To najbardziej zaawansowane zabezpieczenie lakieru, które łączy ekstremalną odporność z niespotykaną elastycznością.',
     content: [
@@ -346,7 +346,7 @@ export const services: ServiceData[] = [
       {
         question: 'Jak długo utrzymuje się powłoka elastomerowa?',
         answer:
-          'W zależności od wybranego pakietu, powłoka elastomerowa utrzymuje się od 3 do 7 lat. Oferujemy pakiety 3-letnie, 5-letnie i 7-letnie z pisemną gwarancją trwałości.',
+          'W zależności od wybranego pakietu, powłoka elastomerowa utrzymuje się od 3 do 7 lat. Oferujemy pakiety 3-letnie, 5-letnie i 7-letnie.',
       },
       {
         question: 'Czy powłoka elastomerowa wymaga specjalnej pielęgnacji?',

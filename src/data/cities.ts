@@ -26,20 +26,19 @@ export const cities: CityData[] = [
     heading: 'Detailing Samochodowy Łuków',
     intro: [
       'ShineCar to studio detailingu samochodowego działające w Łukowie i okolicach. Specjalizujemy się w aplikacji folii ochronnych PPF, korekcie lakieru, powłokach ceramicznych i elastomerowych oraz kompleksowym detailingu wnętrza.',
-      'Nasz warsztat zlokalizowany jest w Świderkach, w bezpośrednim sąsiedztwie Łukowa. Oferujemy również dojazd do klienta na terenie miasta i powiatu łukowskiego.',
+      'Nasz warsztat zlokalizowany jest w Świderkach, w bezpośrednim sąsiedztwie Łukowa.',
       'Łuków to dynamicznie rozwijające się miasto, w którym coraz więcej właścicieli samochodów szuka profesjonalnej ochrony lakieru. W ShineCar zapewniamy usługi na najwyższym poziomie, korzystając z produktów renomowanych marek.',
     ],
     whyUs: [
       'Studio w bezpośrednim sąsiedztwie Łukowa — Świderki 155, bez korków i szukania parkingu.',
       'Produkty klasy premium — pracujemy na markach takich jak Gyeon i Ultrafit.',
       'Indywidualna wycena i podejście — każdy samochód traktujemy inaczej, bo każdy ma inny stan lakieru.',
-      'Gwarancja na usługi — na folie PPF do 10 lat, na powłoki ceramiczne do 5 lat.',
+      'Gwarancja na folie PPF do 10 lat.',
     ],
     faq: [
       { question: 'Gdzie dokładnie znajduje się ShineCar?', answer: 'Nasz warsztat mieści się pod adresem Świderki 155, 21-411 — w bezpośrednim sąsiedztwie Łukowa, ok. 5 minut jazdy od centrum miasta.' },
       { question: 'Jakie są godziny otwarcia?', answer: 'Pracujemy od poniedziałku do piątku w godzinach 8:00–18:00 oraz w soboty 9:00–16:00. Wizytę najlepiej umówić telefonicznie.' },
       { question: 'Czy muszę zostawić auto na cały dzień?', answer: 'Zależy od usługi. Mycie detailingowe trwa 1,5–2h, korekta lakieru 1–3 dni, folia PPF 2–7 dni. Dokładny czas podamy przy wycenie.' },
-      { question: 'Czy oferujecie dojazd do klienta?', answer: 'Tak — na terenie Łukowa i powiatu łukowskiego możemy odebrać i odwieźć samochód. Szczegóły ustalamy indywidualnie.' },
     ],
     keywords: ['detailing Łuków', 'folie PPF Łuków', 'korekta lakieru Łuków', 'powłoki ceramiczne Łuków', 'detailing samochodowy Łuków'],
   },
@@ -52,19 +51,18 @@ export const cities: CityData[] = [
     heading: 'Detailing Samochodowy Siedlce',
     intro: [
       'Szukasz profesjonalnego detailingu samochodowego w Siedlcach? ShineCar obsługuje klientów z Siedlec i całego powiatu siedleckiego. Nasz warsztat znajduje się w Świderkach koło Łukowa — ok. 50 km od Siedlec.',
-      'Dla klientów z Siedlec oferujemy pełen zakres usług: folie ochronne PPF, korekta lakieru, powłoki ceramiczne i elastomerowe, detailing wnętrza oraz mycie detailingowe. Możliwy jest również dojazd do klienta.',
+      'Dla klientów z Siedlec oferujemy pełen zakres usług: folie ochronne PPF, korekta lakieru, powłoki ceramiczne i elastomerowe, detailing wnętrza oraz mycie detailingowe.',
       'Siedlce to jedno z największych miast wschodniej Polski. Wielu naszych stałych klientów dojeżdża do nas właśnie z Siedlec, ceniąc sobie jakość usług i konkurencyjne ceny w porównaniu z dużymi miastami.',
     ],
     whyUs: [
       'Wielu stałych klientów z Siedlec — znają nas i polecają dalej.',
       'Wygodny dojazd — ok. 50 km, niecała godzina jazdy drogą krajową.',
       'Ceny niższe niż w dużych miastach, przy tej samej jakości materiałów i wykonania.',
-      'Możliwość odbioru i dostarczenia pojazdu na terenie Siedlec.',
+      'Wygodna lokalizacja — nasz warsztat łatwo znaleźć, z dużym parkingiem.',
     ],
     faq: [
       { question: 'Czy dojazd z Siedlec się opłaca?', answer: 'Tak — nasze ceny są konkurencyjne w stosunku do studiów w Warszawie czy Lublinie, a jakość materiałów i wykonania identyczna. Wielu klientów z Siedlec regularnie do nas dojeżdża.' },
       { question: 'Ile trwa dojazd z Siedlec?', answer: 'Dojazd z centrum Siedlec do naszego studia w Świderkach zajmuje ok. 45–55 minut drogą krajową.' },
-      { question: 'Czy możecie odebrać auto z Siedlec?', answer: 'Tak, przy większych zleceniach (folia PPF, powłoka ceramiczna) możemy zorganizować odbiór i dostawę pojazdu. Koszt transportu ustalamy indywidualnie.' },
     ],
     distance: 'ok. 50 km od Siedlec',
     keywords: ['detailing Siedlce', 'folie PPF Siedlce', 'korekta lakieru Siedlce', 'powłoki ceramiczne Siedlce'],
@@ -102,7 +100,7 @@ export const cities: CityData[] = [
     heading: 'Detailing Samochodowy Radzyń Podlaski',
     intro: [
       'ShineCar świadczy usługi detailingu samochodowego dla klientów z Radzynia Podlaskiego i okolic. Nasz warsztat w Świderkach koło Łukowa jest oddalony zaledwie ok. 25 km od Radzynia.',
-      'Dla klientów z Radzynia Podlaskiego oferujemy: folie ochronne PPF, folie kolorowe PPF, korektę lakieru, powłoki ceramiczne i elastomerowe, detailing wnętrza oraz mycie detailingowe. Możliwy jest dojazd do klienta.',
+      'Dla klientów z Radzynia Podlaskiego oferujemy: folie ochronne PPF, folie kolorowe PPF, korektę lakieru, powłoki ceramiczne i elastomerowe, detailing wnętrza oraz mycie detailingowe.',
       'Radzyń Podlaski to piękne miasto z bogatą historią. Coraz więcej właścicieli samochodów z Radzynia decyduje się na profesjonalną ochronę lakieru folią PPF lub powłoką ceramiczną w naszym studiu.',
     ],
     whyUs: [
@@ -159,7 +157,7 @@ export const cities: CityData[] = [
       'Indywidualne podejście do każdego zlecenia.',
     ],
     faq: [
-      { question: 'Jak daleko jest z Białej Podlaskiej?', answer: 'Nasz warsztat jest oddalony ok. 70 km od Białej Podlaskiej — to ok. 1 godziny jazdy. Przy większych zleceniach możemy zorganizować transport.' },
+      { question: 'Jak daleko jest z Białej Podlaskiej?', answer: 'Nasz warsztat jest oddalony ok. 70 km od Białej Podlaskiej — to ok. 1 godziny jazdy.' },
       { question: 'Czy detailing to dobry pomysł przed sprzedażą auta?', answer: 'Tak — profesjonalny detailing (korekta lakieru + powłoka) może podnieść wartość samochodu o kilka tysięcy złotych. Szczególnie warto zainwestować w korektę i czyszczenie wnętrza.' },
     ],
     distance: 'ok. 70 km od Białej Podlaskiej',
@@ -204,7 +202,7 @@ export const cities: CityData[] = [
     whyUs: [
       'Alternatywa dla drogich studiów w Lublinie — takie same materiały, niższe ceny.',
       'Ok. 55 km od Lubartowa — szybki dojazd.',
-      'Gwarancja na usługi — folie PPF do 10 lat, powłoki do 5 lat.',
+      'Gwarancja na folie PPF do 10 lat.',
     ],
     faq: [
       { question: 'Czy jesteście tańsi niż studia w Lublinie?', answer: 'Tak — nasze ceny są konkurencyjne w porównaniu z Lublinem, a używamy tych samych materiałów premium (Gyeon, Ultrafit). Różnica w cenie to efekt niższych kosztów operacyjnych.' },
