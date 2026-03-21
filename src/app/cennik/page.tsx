@@ -295,7 +295,7 @@ export default function CennikPage() {
                 <p className="text-muted-foreground max-w-xl mx-auto">
                   Ceny są orientacyjne i zależą od rozmiaru pojazdu, stanu
                   lakieru oraz zakresu prac. Skontaktuj się z nami lub skorzystaj
-                  z <Link href="/wycena" className="text-primary hover:underline">kalkulatora wycen online</Link>.
+                  — <Link href="/wycena" className="text-primary hover:underline">zapytaj o wycenę online</Link>.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
                   <a
