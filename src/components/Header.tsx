@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Button } from './ui/button';
-import { services } from '@/data/services';
+import { services, getServiceUrl } from '@/data/services';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -124,7 +124,7 @@ const Header = () => {
                 href="/uslugi"
                 className="flex items-center gap-1 text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm tracking-wide relative group"
               >
-                Oferta
+                Usługi
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isOfertaOpen ? 'rotate-180' : ''}`} />
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
               </Link>
@@ -135,10 +135,10 @@ const Header = () => {
                     {services.map((service) => (
                       <Link
                         key={service.slug}
-                        href={`/uslugi/${service.slug}`}
+                        href={getServiceUrl(service)}
                         className="block px-5 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-white/5 transition-colors"
                       >
-                        {service.title}
+                        {service.navTitle || service.title}
                       </Link>
                     ))}
                   </div>
@@ -226,7 +226,7 @@ const Header = () => {
                   onClick={() => setIsMobileOfertaOpen(!isMobileOfertaOpen)}
                   className="flex items-center justify-between w-full text-left text-primary font-medium px-4 py-3 text-lg"
                 >
-                  Oferta
+                  Usługi
                   <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMobileOfertaOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {isMobileOfertaOpen && (
@@ -234,11 +234,11 @@ const Header = () => {
                     {services.map((service) => (
                       <Link
                         key={service.slug}
-                        href={`/uslugi/${service.slug}`}
+                        href={getServiceUrl(service)}
                         onClick={() => setIsMenuOpen(false)}
                         className="block px-4 py-2.5 text-foreground/80 hover:text-primary transition-colors font-medium text-base uppercase tracking-wide"
                       >
-                        {service.title}
+                        {service.navTitle || service.title}
                       </Link>
                     ))}
                   </div>

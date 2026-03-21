@@ -82,7 +82,7 @@ const Gallery = () => {
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button asChild className="px-8 py-4 h-auto">
-                  <Link href="/galeria">
+                  <Link href="/realizacje-detailing-lukow">
                     Zobacz galerię
                   </Link>
                 </Button>

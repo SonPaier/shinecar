@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { services, getServiceUrl } from '@/data/services';
 
 const Footer = () => {
   const pathname = usePathname();
@@ -50,13 +51,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-foreground mb-4">Nasze usługi</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/uslugi/folie-ppf" className="text-muted-foreground hover:text-primary transition-colors">Folie ochronne PPF</Link></li>
-              <li><Link href="/uslugi/korekta-lakieru" className="text-muted-foreground hover:text-primary transition-colors">Korekta lakieru</Link></li>
-              <li><Link href="/uslugi/powloki-ceramiczne" className="text-muted-foreground hover:text-primary transition-colors">Powłoki ceramiczne</Link></li>
-              <li><Link href="/uslugi/detailing-wnetrza" className="text-muted-foreground hover:text-primary transition-colors">Detailing wnętrza</Link></li>
-              <li><Link href="/uslugi/folie-kolorowe-ppf" className="text-muted-foreground hover:text-primary transition-colors">Folie kolorowe PPF</Link></li>
-              <li><Link href="/uslugi/mycie-detailingowe" className="text-muted-foreground hover:text-primary transition-colors">Mycie detailingowe</Link></li>
-              <li><Link href="/uslugi/odbior-auta-z-salonu" className="text-muted-foreground hover:text-primary transition-colors">Odbiór auta z salonu</Link></li>
+              {services.map((service) => (
+                <li key={service.slug}><Link href={getServiceUrl(service)} className="text-muted-foreground hover:text-primary transition-colors">{service.title}</Link></li>
+              ))}
             </ul>
           </div>
 
@@ -76,8 +73,8 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm mt-6">
               Zachęcamy do zobaczenia naszych realizacji oraz sprawdzenia oferty.
             </p>
-            <Link href="/galeria" className="text-primary hover:text-primary/80 text-sm font-medium mt-2 transition-colors inline-block">
-              Zobacz galerię →
+            <Link href="/realizacje-detailing-lukow" className="text-primary hover:text-primary/80 text-sm font-medium mt-2 transition-colors inline-block">
+              Zobacz realizacje →
             </Link>
           </div>
 
@@ -89,7 +86,7 @@ const Footer = () => {
               <li><button onClick={goToSection('about')} className="text-left w-full text-muted-foreground hover:text-primary transition-colors">O nas</button></li>
               <li><Link href="/uslugi" className="text-muted-foreground hover:text-primary transition-colors">Oferta</Link></li>
               <li><Link href="/cennik" className="text-muted-foreground hover:text-primary transition-colors">Cennik</Link></li>
-              <li><Link href="/galeria" className="text-muted-foreground hover:text-primary transition-colors">Galeria</Link></li>
+              <li><Link href="/realizacje-detailing-lukow" className="text-muted-foreground hover:text-primary transition-colors">Realizacje</Link></li>
               <li><button onClick={goToSection('contact')} className="text-left w-full text-muted-foreground hover:text-primary transition-colors">Kontakt</button></li>
               <li><Link href="/polityka-prywatnosci" className="text-muted-foreground hover:text-primary transition-colors">Polityka prywatności</Link></li>
             </ul>

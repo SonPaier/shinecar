@@ -16,6 +16,7 @@ export interface BlogArticle {
   keywords: string[];
   content: string[];
   sections: BlogSection[];
+  relatedServices?: string[];
 }
 
 const blogImage1 = 'https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2Faa9360e1636e474abf453627071b5f19?format=webp&width=800';
@@ -90,6 +91,7 @@ export const blogArticles: BlogArticle[] = [
         ],
       },
     ],
+    relatedServices: ['detailing-wnetrza', 'pranie-tapicerki'],
   },
   {
     slug: 'folia-ppf-polysk-czy-mat',
@@ -163,6 +165,7 @@ export const blogArticles: BlogArticle[] = [
         ],
       },
     ],
+    relatedServices: ['folie-ppf', 'folie-kolorowe-ppf'],
   },
   {
     slug: 'ile-wytrzymuje-powloka-ceramiczna',
@@ -227,6 +230,7 @@ export const blogArticles: BlogArticle[] = [
         ],
       },
     ],
+    relatedServices: ['powloki-ceramiczne', 'powloki-elastomerowe', 'korekta-lakieru'],
   },
   {
     slug: 'folia-ppf-kompendium-ochrony-lakieru',
@@ -318,6 +322,7 @@ export const blogArticles: BlogArticle[] = [
         ],
       },
     ],
+    relatedServices: ['folie-ppf', 'folie-kolorowe-ppf', 'korekta-lakieru'],
   },
 ];
 

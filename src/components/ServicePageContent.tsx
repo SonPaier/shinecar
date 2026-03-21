@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { ServiceData } from '@/data/services';
-import { services } from '@/data/services';
+import { services, getServiceUrl } from '@/data/services';
 import { cities } from '@/data/cities';
 import { Phone, Clock, CheckCircle, Lightbulb, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
@@ -144,7 +144,7 @@ export default function ServicePageContent({ service }: Props) {
               .map((s) => (
                 <Link
                   key={s.slug}
-                  href={`/uslugi/${s.slug}`}
+                  href={getServiceUrl(s)}
                   className="border border-border rounded-2xl p-5 bg-gradient-glass backdrop-blur-sm hover:border-primary/50 transition-colors group"
                 >
                   <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">

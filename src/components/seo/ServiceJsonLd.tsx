@@ -34,7 +34,7 @@ export default function ServiceJsonLd({ service }: ServiceJsonLdProps) {
       { '@type': 'City', name: 'Ryki', addressCountry: 'PL' },
       { '@type': 'City', name: 'Lubartów', addressCountry: 'PL' },
     ],
-    url: `https://shinecar.pl/uslugi/${service.slug}`,
+    url: `https://shinecar.pl/${service.urlSlug}`,
     image: service.image,
     offers: {
       '@type': 'Offer',

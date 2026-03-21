@@ -6,7 +6,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import { getBlogBySlug, getAllBlogSlugs } from '@/data/blog';
-import { CheckCircle, Calendar, Clock, Phone } from 'lucide-react';
+import { getServiceBySlug, getServiceUrl } from '@/data/services';
+import { CheckCircle, Calendar, Clock, Phone, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface Props {
@@ -38,6 +39,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: article.date,
       images: [{ url: article.image, width: 1200, height: 630, alt: article.title }],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.metaTitle,
+      description: article.metaDescription,
+      images: [article.image],
+    },
   };
 }
 
@@ -65,6 +72,7 @@ export default async function BlogArticlePage({ params }: Props) {
     description: article.metaDescription,
     image: article.image,
     datePublished: article.date,
+    dateModified: article.date,
     author: {
       '@type': 'Organization',
       name: 'ShineCar',
@@ -166,6 +174,34 @@ export default async function BlogArticlePage({ params }: Props) {
                     )}
                   </div>
                 ))}
+
+                {/* Related Services */}
+                {article.relatedServices && article.relatedServices.length > 0 && (
+                  <div className="space-y-4">
+                    <h2 className="font-luxury text-2xl text-foreground">
+                      Powiązane usługi
+                    </h2>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      {article.relatedServices.map((slug) => {
+                        const service = getServiceBySlug(slug);
+                        if (!service) return null;
+                        return (
+                          <Link
+                            key={slug}
+                            href={getServiceUrl(service)}
+                            className="flex items-center justify-between border border-border rounded-xl p-4 hover:border-primary/50 transition-colors group"
+                          >
+                            <div>
+                              <span className="font-semibold text-foreground group-hover:text-primary transition-colors">{service.title}</span>
+                              <span className="block text-sm text-muted-foreground">{service.price}</span>
+                            </div>
+                            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
 
                 {/* CTA */}
                 <div className="border border-border rounded-3xl p-8 bg-gradient-glass backdrop-blur-sm text-center space-y-4">

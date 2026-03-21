@@ -17,11 +17,11 @@ const baseMetadata: Metadata = {
   metadataBase: new URL('https://shinecar.pl'),
   applicationName: 'ShineCar',
   title: {
-    default: 'Folie PPF Łuków - Detailing Samochodowy Łuków',
+    default: 'ShineCar Łuków — Studio Detailingu Premium | Folie PPF, Ceramika, Korekta Lakieru',
     template: '%s | ShineCar',
   },
   description:
-    'Profesjonalny detailing samochodowy w Łukowie. Folie PPF, korekta lakieru, powłoki ceramiczne, detailing wnętrz. Zadzwoń: 782 195 321 i umów wizytę!',
+    'ShineCar — profesjonalne studio detailingu w Łukowie. Folie PPF, korekta lakieru, powłoki ceramiczne i elastomerowe, detailing wnętrz. Zadzwoń: 782 195 321!',
   manifest: '/site.webmanifest',
   keywords: [
     'detailing Łuków',
@@ -38,9 +38,9 @@ const baseMetadata: Metadata = {
   openGraph: {
     url: 'https://shinecar.pl',
     siteName: 'ShineCar',
-    title: 'Folie PPF Łuków - Detailing Samochodowy Łuków',
+    title: 'ShineCar Łuków — Studio Detailingu Premium | Folie PPF, Ceramika, Korekta Lakieru',
     description:
-      'Profesjonalny detailing samochodowy w Łukowie. Folie PPF, korekta lakieru, powłoki ceramiczne, detailing wnętrz. Zadzwoń: 782 195 321 i umów wizytę!',
+      'ShineCar — profesjonalne studio detailingu w Łukowie. Folie PPF, korekta lakieru, powłoki ceramiczne i elastomerowe, detailing wnętrz. Zadzwoń: 782 195 321!',
     locale: 'pl_PL',
     type: 'website',
     images: [{
@@ -52,9 +52,9 @@ const baseMetadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Folie PPF Łuków - Detailing Samochodowy Łuków',
+    title: 'ShineCar Łuków — Studio Detailingu Premium | Folie PPF, Ceramika, Korekta Lakieru',
     description:
-      'Profesjonalny detailing samochodowy w Łukowie. Folie PPF, korekta lakieru, powłoki ceramiczne, detailing wnętrz. Zadzwoń: 782 195 321 i umów wizytę!',
+      'ShineCar — profesjonalne studio detailingu w Łukowie. Folie PPF, korekta lakieru, powłoki ceramiczne i elastomerowe, detailing wnętrz. Zadzwoń: 782 195 321!',
     images: ['https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2F9eebaa4a7f7d4db3a5b81f4f46b76ff6?format=webp&width=1200'],
   },
   robots: {

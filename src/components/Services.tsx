@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { Clock } from 'lucide-react';
+import { getServiceBySlug, getServiceUrl } from '@/data/services';
 
 const serviceImage1 = 'https://cdn.builder.io/api/v1/image/assets%2Fa59c3b14b9b7404f8e5c72990dc66950%2Fa70409b6c6f74d1f8eef91a32c353e5c?format=webp&width=800';
 const serviceImage2 = 'https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2Faa9360e1636e474abf453627071b5f19?format=webp&width=800';
@@ -91,7 +92,7 @@ Full Body: od 10 000 zł`,
           {services.map((service) => (
             <Link
               key={service.id}
-              href={`/uslugi/${service.slug}`}
+              href={getServiceBySlug(service.slug) ? getServiceUrl(getServiceBySlug(service.slug)!) : `/uslugi/${service.slug}`}
               className="group border border-border rounded-3xl overflow-hidden bg-gradient-glass backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <div className="h-56 overflow-hidden relative">

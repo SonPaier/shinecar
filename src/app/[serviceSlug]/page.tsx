@@ -1,35 +1,37 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { services, getServiceBySlug, getAllServiceSlugs } from '@/data/services';
+import { getServiceByUrlSlug, getAllServiceUrlSlugs, getServiceUrl } from '@/data/services';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import ServiceJsonLd from '@/components/seo/ServiceJsonLd';
 import FaqJsonLd from '@/components/seo/FaqJsonLd';
 import ServicePageContent from '@/components/ServicePageContent';
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ serviceSlug: string }>;
 }
 
 export async function generateStaticParams() {
-  return getAllServiceSlugs().map((slug) => ({ slug }));
+  return getAllServiceUrlSlugs().map((serviceSlug) => ({ serviceSlug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const service = getServiceBySlug(slug);
+  const { serviceSlug } = await params;
+  const service = getServiceByUrlSlug(serviceSlug);
   if (!service) return {};
+
+  const url = getServiceUrl(service);
 
   return {
     title: service.metaTitle,
     description: service.metaDescription,
     keywords: service.keywords,
     alternates: {
-      canonical: `/uslugi/${service.slug}`,
+      canonical: url,
     },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
-      url: `https://shinecar.pl/uslugi/${service.slug}`,
+      url: `https://shinecar.pl${url}`,
       type: 'website',
       locale: 'pl_PL',
       images: [{ url: service.image, width: 1200, height: 630, alt: service.title }],
@@ -44,8 +46,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ServicePage({ params }: Props) {
-  const { slug } = await params;
-  const service = getServiceBySlug(slug);
+  const { serviceSlug } = await params;
+  const service = getServiceByUrlSlug(serviceSlug);
 
   if (!service) {
     notFound();
