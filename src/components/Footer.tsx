@@ -41,7 +41,7 @@ const Footer = () => {
               <a href="https://www.facebook.com/ShineCarKosmetyka" aria-label="Facebook" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="w-7 h-7" />
               </a>
-              <a href="https://www.instagram.com/shinecar_kosmetyka/" aria-label="Instagram" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/shinecar_ppf/" aria-label="Instagram" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="w-7 h-7" />
               </a>
             </div>
@@ -78,20 +78,6 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold text-foreground mb-4">Szybkie linki</h4>
-            <ul className="space-y-2 text-sm">
-              <li><button onClick={goToSection('home')} className="block py-1.5 text-left w-full text-muted-foreground hover:text-primary transition-colors">Strona główna</button></li>
-              <li><button onClick={goToSection('about')} className="block py-1.5 text-left w-full text-muted-foreground hover:text-primary transition-colors">O nas</button></li>
-              <li><Link href="/uslugi" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Oferta</Link></li>
-              <li><Link href="/cennik" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Cennik</Link></li>
-              <li><Link href="/realizacje-detailing-lukow" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Realizacje</Link></li>
-              <li><button onClick={goToSection('contact')} className="block py-1.5 text-left w-full text-muted-foreground hover:text-primary transition-colors">Kontakt</button></li>
-              <li><Link href="/polityka-prywatnosci" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Polityka prywatności</Link></li>
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold text-foreground mb-4">Kontakt</h4>
@@ -119,6 +105,22 @@ const Footer = () => {
                 <span className="text-muted-foreground">Świderki 155, 21-411<br />okolice Łukowa</span>
               </li>
             </ul>
+          </div>
+
+          {/* Map */}
+          <div>
+            <h4 className="text-lg font-semibold text-foreground mb-4">Znajdź nas</h4>
+            <div className="rounded-xl overflow-hidden border border-border">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.0!2d22.3348136!3d51.8451033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472207d03ce733a5%3A0x5eb59bb4e54b9f74!2sShine%20Car%20%E2%80%93%20Auto%20Detailing%20%C5%81uk%C3%B3w!5e0!3m2!1spl!2spl"
+                width="100%"
+                height="220"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="ShineCar — lokalizacja na mapie Google"
+              />
+            </div>
           </div>
         </div>
 

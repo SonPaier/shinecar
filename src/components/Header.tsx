@@ -154,19 +154,20 @@ const Header = () => {
               )}
             </div>
 
-            {[
-              { name: 'Galeria', id: 'gallery' },
-              { name: 'Kontakt', id: 'contact' },
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm tracking-wide relative group"
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
-              </button>
-            ))}
+            <Link
+              href="/realizacje-detailing-lukow"
+              className="text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm tracking-wide relative group"
+            >
+              Realizacje
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+            </Link>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm tracking-wide relative group"
+            >
+              Kontakt
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+            </button>
 
             <Link
               href="/cennik"
@@ -262,12 +263,13 @@ const Header = () => {
                 )}
               </div>
 
-              <button
-                onClick={() => scrollToSection('gallery')}
+              <Link
+                href="/realizacje-detailing-lukow"
+                onClick={() => setIsMenuOpen(false)}
                 className="text-left text-foreground hover:text-primary transition-colors font-medium px-4 py-3 text-lg"
               >
-                Galeria
-              </button>
+                Realizacje
+              </Link>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="text-left text-foreground hover:text-primary transition-colors font-medium px-4 py-3 text-lg"

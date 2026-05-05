@@ -128,11 +128,13 @@ All colors MUST be HSL.
     text-decoration-thickness: 1px;
   }
 
-  /* Footer/header/nav: linki listy/UI bez podkreślenia. */
+  /* Footer/header/nav: linki listy/UI bez podkreślenia.
+     !important wymagane — base reguła `li a:not(.no-underline)` ma wyższą
+     specificity (2 elementy + 1 klasa) niż prosta `footer a` (2 elementy). */
   footer a,
   footer button,
   header a,
   nav a {
-    text-decoration: none;
+    text-decoration: none !important;
   }
 }

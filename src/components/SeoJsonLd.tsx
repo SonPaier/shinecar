@@ -123,7 +123,7 @@ const SeoJsonLd: React.FC = () => {
     },
     sameAs: [
       'https://www.facebook.com/ShineCarKosmetyka',
-      'https://www.instagram.com/shinecar_kosmetyka/',
+      'https://www.instagram.com/shinecar_ppf/',
       'https://www.google.com/maps/place/Shine+Car+%E2%80%93+Auto+Detailing+%C5%81uk%C3%B3w/',
     ],
     founder: {
