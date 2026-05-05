@@ -4,6 +4,8 @@ import Link from 'next/link';
 import type { ServiceData } from '@/data/services';
 import { services, getServiceUrl } from '@/data/services';
 import { cities } from '@/data/cities';
+import { getGoogleReview } from '@/data/googleReviews';
+import GoogleReviewCard from './GoogleReviewCard';
 import { Phone, Clock, CheckCircle, Lightbulb, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import {
@@ -106,6 +108,26 @@ export default function ServicePageContent({ service }: Props) {
         </div>
       </div>
 
+      {/* Hub link — only for coatings */}
+      {['powloki-ceramiczne', 'powloki-grafenowe', 'powloki-elastomerowe'].includes(service.slug) && (
+        <div className="border border-primary/30 rounded-2xl p-6 bg-primary/5 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:justify-between">
+          <div>
+            <h3 className="font-semibold text-foreground mb-1">
+              Wahasz się między ceramiką, grafenem a elastomerem?
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              Porównanie wszystkich trzech technologii w jednym miejscu — twardość, trwałość, ceny od.
+            </p>
+          </div>
+          <Link
+            href="/powloka-ochronna-na-auto-lukow"
+            className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full font-medium hover:brightness-110 transition-all whitespace-nowrap"
+          >
+            Zobacz porównanie powłok <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      )}
+
       {/* FAQ */}
       {service.faq.length > 0 && (
         <div>
@@ -128,6 +150,19 @@ export default function ServicePageContent({ service }: Props) {
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+      )}
+
+      {/* Google review */}
+      {service.googleReviewId && getGoogleReview(service.googleReviewId) && (
+        <div>
+          <h2 className="font-luxury text-2xl text-foreground mb-6">
+            Co mówią o nas klienci
+          </h2>
+          <GoogleReviewCard
+            review={getGoogleReview(service.googleReviewId)!}
+            asSection={false}
+          />
         </div>
       )}
 

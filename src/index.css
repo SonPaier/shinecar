@@ -117,4 +117,14 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground font-sans;
   }
+
+  /* WCAG 2.4.7 link distinction: inline links in body text need a non-color cue.
+     Excludes nav (header dropdown, breadcrumbs) and explicit no-underline opt-out. */
+  p a:not(.no-underline),
+  li a:not(.no-underline),
+  blockquote a:not(.no-underline) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+  }
 }

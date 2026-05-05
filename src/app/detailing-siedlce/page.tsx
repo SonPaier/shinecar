@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { getCityBySlug } from '@/data/cities';
 import CityPageContent from '@/components/CityPageContent';
-import FaqJsonLd from '@/components/seo/FaqJsonLd';
 
 const city = getCityBySlug('detailing-siedlce')!;
 
@@ -51,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <FaqJsonLd items={city.faq} />
       <CityPageContent city={city} />
     </>
   );

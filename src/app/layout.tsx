@@ -102,11 +102,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pl" className={poppins.variable}>
       <head>
+        <link rel="preconnect" href="https://cdn.builder.io" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://cdn.builder.io" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SEKRLB5DT4"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

@@ -3,13 +3,12 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
-import FaqJsonLd from '@/components/seo/FaqJsonLd';
 import { Phone, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Cennik Detailingu Łuków — Folie PPF, Korekta, Powłoki Ceramiczne',
+  title: 'Cennik Detailingu Łuków — Folie PPF, Powłoki, Korekta',
   description:
-    'Sprawdź cennik usług detailingu ShineCar Łuków: folie PPF od 4 500 zł, korekta lakieru od 1 000 zł, powłoki ceramiczne od 1 000 zł, detailing wnętrza od 250 zł.',
+    'Cennik ShineCar Łuków: folie PPF od 4 500 zł, korekta lakieru od 1 000 zł, powłoki ceramiczne od 1 000 zł, grafenowe od 1 200 zł, elastomerowe od 1 800 zł.',
   alternates: {
     canonical: '/cennik',
   },
@@ -83,9 +82,12 @@ const pricingData: PricingCategory[] = [
   },
   {
     title: 'Powłoki ochronne',
-    subtitle: 'Ceramiczne, elastomerowe i woskowe zabezpieczenia',
+    subtitle: 'Ceramiczne, grafenowe, elastomerowe i woskowe zabezpieczenia',
     items: [
       { name: 'Powłoka ceramiczna 1 rok', price: '1 000 zł' },
+      { name: 'Powłoka grafenowa 2 lata', price: '1 200 zł' },
+      { name: 'Powłoka grafenowa 3 lata', price: '1 600 zł' },
+      { name: 'Powłoka grafenowa 5 lat', price: '2 100 zł' },
       { name: 'Powłoka elastomerowa 3 lata', price: '1 800 zł' },
       { name: 'Powłoka elastomerowa 5 lat', price: '2 300 zł' },
       { name: 'Powłoka elastomerowa 7 lat', price: '2 800 zł' },
@@ -240,7 +242,6 @@ export default function CennikPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <FaqJsonLd items={cennikFaq} />
 
         <section className="py-32 bg-background">
           <div className="container mx-auto px-6">
@@ -257,7 +258,7 @@ export default function CennikPage() {
               <div className="text-center space-y-6 mb-12">
                 <div className="h-1 w-16 bg-primary rounded-full mx-auto" />
                 <h1 className="font-luxury text-4xl lg:text-5xl text-foreground">
-                  Cennik usług
+                  Cennik Detailingu Łuków
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                   Orientacyjne ceny usług detailingu ShineCar. Finalna wycena

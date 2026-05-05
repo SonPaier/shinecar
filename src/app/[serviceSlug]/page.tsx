@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 import { getServiceByUrlSlug, getAllServiceUrlSlugs, getServiceUrl } from '@/data/services';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import ServiceJsonLd from '@/components/seo/ServiceJsonLd';
-import FaqJsonLd from '@/components/seo/FaqJsonLd';
 import ServicePageContent from '@/components/ServicePageContent';
 
 interface Props {
@@ -56,7 +55,6 @@ export default async function ServicePage({ params }: Props) {
   return (
     <>
       <ServiceJsonLd service={service} />
-      <FaqJsonLd items={service.faq} />
       <section className="py-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">

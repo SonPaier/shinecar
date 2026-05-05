@@ -38,10 +38,10 @@ const Footer = () => {
             </p>
             <div className="mb-3 text-foreground font-medium">Śledź nas na mediach</div>
             <div className="flex items-center space-x-5">
-              <a href="https://www.facebook.com/ShineCarKosmetyka" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/ShineCarKosmetyka" aria-label="Facebook" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="w-7 h-7" />
               </a>
-              <a href="https://www.instagram.com/shinecar_kosmetyka/" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/shinecar_kosmetyka/" aria-label="Instagram" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="w-7 h-7" />
               </a>
             </div>
@@ -52,7 +52,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-foreground mb-4">Nasze usługi</h4>
             <ul className="space-y-2 text-sm">
               {services.map((service) => (
-                <li key={service.slug}><Link href={getServiceUrl(service)} className="text-muted-foreground hover:text-primary transition-colors">{service.title}</Link></li>
+                <li key={service.slug}><Link href={getServiceUrl(service)} className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">{service.title}</Link></li>
               ))}
             </ul>
           </div>
@@ -61,14 +61,14 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-foreground mb-4">Obsługiwane miasta</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/detailing-lukow" className="text-muted-foreground hover:text-primary transition-colors">Detailing Łuków</Link></li>
-              <li><Link href="/detailing-siedlce" className="text-muted-foreground hover:text-primary transition-colors">Detailing Siedlce</Link></li>
-              <li><Link href="/detailing-miedzyrzec-podlaski" className="text-muted-foreground hover:text-primary transition-colors">Detailing Międzyrzec Podlaski</Link></li>
-              <li><Link href="/detailing-radzyn-podlaski" className="text-muted-foreground hover:text-primary transition-colors">Detailing Radzyń Podlaski</Link></li>
-              <li><Link href="/detailing-biala-podlaska" className="text-muted-foreground hover:text-primary transition-colors">Detailing Biała Podlaska</Link></li>
-              <li><Link href="/detailing-garwolin" className="text-muted-foreground hover:text-primary transition-colors">Detailing Garwolin</Link></li>
-              <li><Link href="/detailing-ryki" className="text-muted-foreground hover:text-primary transition-colors">Detailing Ryki</Link></li>
-              <li><Link href="/detailing-lubartow" className="text-muted-foreground hover:text-primary transition-colors">Detailing Lubartów</Link></li>
+              <li><Link href="/detailing-lukow" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Detailing Łuków</Link></li>
+              <li><Link href="/detailing-siedlce" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Detailing Siedlce</Link></li>
+              <li><Link href="/detailing-miedzyrzec-podlaski" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Detailing Międzyrzec Podlaski</Link></li>
+              <li><Link href="/detailing-radzyn-podlaski" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Detailing Radzyń Podlaski</Link></li>
+              <li><Link href="/detailing-biala-podlaska" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Detailing Biała Podlaska</Link></li>
+              <li><Link href="/detailing-garwolin" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Detailing Garwolin</Link></li>
+              <li><Link href="/detailing-ryki" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Detailing Ryki</Link></li>
+              <li><Link href="/detailing-lubartow" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Detailing Lubartów</Link></li>
             </ul>
             <p className="text-muted-foreground text-sm mt-6">
               Zachęcamy do zobaczenia naszych realizacji oraz sprawdzenia oferty.
@@ -82,13 +82,13 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-foreground mb-4">Szybkie linki</h4>
             <ul className="space-y-2 text-sm">
-              <li><button onClick={goToSection('home')} className="text-left w-full text-muted-foreground hover:text-primary transition-colors">Strona główna</button></li>
-              <li><button onClick={goToSection('about')} className="text-left w-full text-muted-foreground hover:text-primary transition-colors">O nas</button></li>
-              <li><Link href="/uslugi" className="text-muted-foreground hover:text-primary transition-colors">Oferta</Link></li>
-              <li><Link href="/cennik" className="text-muted-foreground hover:text-primary transition-colors">Cennik</Link></li>
-              <li><Link href="/realizacje-detailing-lukow" className="text-muted-foreground hover:text-primary transition-colors">Realizacje</Link></li>
-              <li><button onClick={goToSection('contact')} className="text-left w-full text-muted-foreground hover:text-primary transition-colors">Kontakt</button></li>
-              <li><Link href="/polityka-prywatnosci" className="text-muted-foreground hover:text-primary transition-colors">Polityka prywatności</Link></li>
+              <li><button onClick={goToSection('home')} className="block py-1.5 text-left w-full text-muted-foreground hover:text-primary transition-colors">Strona główna</button></li>
+              <li><button onClick={goToSection('about')} className="block py-1.5 text-left w-full text-muted-foreground hover:text-primary transition-colors">O nas</button></li>
+              <li><Link href="/uslugi" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Oferta</Link></li>
+              <li><Link href="/cennik" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Cennik</Link></li>
+              <li><Link href="/realizacje-detailing-lukow" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Realizacje</Link></li>
+              <li><button onClick={goToSection('contact')} className="block py-1.5 text-left w-full text-muted-foreground hover:text-primary transition-colors">Kontakt</button></li>
+              <li><Link href="/polityka-prywatnosci" className="block py-1.5 text-muted-foreground hover:text-primary transition-colors">Polityka prywatności</Link></li>
             </ul>
           </div>
 
@@ -135,7 +135,7 @@ const Footer = () => {
           </div>
           <div className="text-left text-sm text-muted-foreground mt-6 font-luxury">
             Stworzone z miłością i pomocą{' '}
-            <a href="https://carfect.pl" target="_blank" rel="noopener" className="text-primary hover:text-primary/80 transition-colors">
+            <a href="https://carfect.pl" target="_blank" rel="noopener" className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">
               carfect.pl
             </a>
             {' '}- system do zarządzania studiem detailingu

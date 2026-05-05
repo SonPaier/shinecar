@@ -19,9 +19,10 @@ const SeoJsonLd: React.FC = () => {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 51.925,
-      longitude: 22.38,
+      latitude: 51.8451033,
+      longitude: 22.3348136,
     },
+    hasMap: 'https://www.google.com/maps?q=51.8451033,22.3348136',
     areaServed: [
       { '@type': 'City', name: 'Łuków', addressCountry: 'PL' },
       { '@type': 'City', name: 'Siedlce', addressCountry: 'PL' },
@@ -123,6 +124,37 @@ const SeoJsonLd: React.FC = () => {
     sameAs: [
       'https://www.facebook.com/ShineCarKosmetyka',
       'https://www.instagram.com/shinecar_kosmetyka/',
+      'https://www.google.com/maps/place/Shine+Car+%E2%80%93+Auto+Detailing+%C5%81uk%C3%B3w/',
+    ],
+    founder: {
+      '@type': 'Person',
+      name: 'Marcin Przybysławski',
+      jobTitle: 'Założyciel i główny detailer',
+      telephone: '+48 782 195 321',
+      email: 'shinecarkosmetyka@o2.pl',
+      worksFor: {
+        '@type': 'AutomotiveBusiness',
+        name: 'ShineCar',
+        url: 'https://shinecar.pl',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Świderki 155',
+        addressLocality: 'Świderki',
+        addressRegion: 'lubelskie',
+        postalCode: '21-411',
+        addressCountry: 'PL',
+      },
+    },
+    knowsAbout: [
+      'detailing samochodowy',
+      'powłoki ceramiczne',
+      'powłoki grafenowe',
+      'powłoki elastomerowe',
+      'folie ochronne PPF',
+      'korekta lakieru',
+      'zabezpieczenie lakieru samochodowego',
+      'detailing wnętrza',
     ],
   };
 
