@@ -131,16 +131,24 @@ const Header = () => {
 
               {isOfertaOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
-                  <div className="bg-deep-black/95 backdrop-blur-2xl border border-border/50 rounded-xl shadow-luxury py-2 min-w-[240px]">
-                    {services.map((service) => (
-                      <Link
-                        key={service.slug}
-                        href={getServiceUrl(service)}
-                        className="block px-5 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-white/5 transition-colors"
-                      >
-                        {service.navTitle || service.title}
-                      </Link>
-                    ))}
+                  <div className="bg-deep-black/95 backdrop-blur-2xl border border-border/50 rounded-xl shadow-luxury py-2 min-w-[260px]">
+                    <Link
+                      href="/powloka-ochronna-na-auto-lukow"
+                      className="block px-5 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-white/5 transition-colors"
+                    >
+                      Powłoki ochronne
+                    </Link>
+                    {services
+                      .filter((s) => !['powloki-ceramiczne', 'powloki-grafenowe', 'powloki-elastomerowe'].includes(s.slug))
+                      .map((service) => (
+                        <Link
+                          key={service.slug}
+                          href={getServiceUrl(service)}
+                          className="block px-5 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-white/5 transition-colors"
+                        >
+                          {service.navTitle || service.title}
+                        </Link>
+                      ))}
                   </div>
                 </div>
               )}
@@ -231,16 +239,25 @@ const Header = () => {
                 </button>
                 {isMobileOfertaOpen && (
                   <div className="pl-6 pb-2">
-                    {services.map((service) => (
-                      <Link
-                        key={service.slug}
-                        href={getServiceUrl(service)}
-                        onClick={() => setIsMenuOpen(false)}
-                        className="block px-4 py-2.5 text-foreground/80 hover:text-primary transition-colors font-medium text-base uppercase tracking-wide"
-                      >
-                        {service.navTitle || service.title}
-                      </Link>
-                    ))}
+                    <Link
+                      href="/powloka-ochronna-na-auto-lukow"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block px-4 py-2.5 text-foreground/80 hover:text-primary transition-colors font-medium text-base uppercase tracking-wide"
+                    >
+                      Powłoki ochronne
+                    </Link>
+                    {services
+                      .filter((s) => !['powloki-ceramiczne', 'powloki-grafenowe', 'powloki-elastomerowe'].includes(s.slug))
+                      .map((service) => (
+                        <Link
+                          key={service.slug}
+                          href={getServiceUrl(service)}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="block px-4 py-2.5 text-foreground/80 hover:text-primary transition-colors font-medium text-base uppercase tracking-wide"
+                        >
+                          {service.navTitle || service.title}
+                        </Link>
+                      ))}
                   </div>
                 )}
               </div>

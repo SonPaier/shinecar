@@ -97,6 +97,24 @@ export default function CityPageContent({ city }: { city: CityData }) {
                 </div>
               </div>
 
+              {/* Hub link — coatings comparison */}
+              <div className="mb-16 border border-primary/30 rounded-2xl p-6 bg-primary/5 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:justify-between">
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    Wahasz się między ceramiką, grafenem a elastomerem?
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Porównanie wszystkich powłok ochronnych w jednym miejscu — twardość, trwałość, ceny od.
+                  </p>
+                </div>
+                <Link
+                  href="/powloka-ochronna-na-auto-lukow"
+                  className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full font-medium hover:brightness-110 transition-all whitespace-nowrap"
+                >
+                  Zobacz porównanie powłok <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+
               {/* Dlaczego ShineCar */}
               {city.whyUs && city.whyUs.length > 0 && (
                 <div className="space-y-6 mb-16">

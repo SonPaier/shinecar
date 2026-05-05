@@ -36,6 +36,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...servicePages,
     {
+      url: `${base}/powloka-ochronna-na-auto-lukow`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${base}/cennik`,
       lastModified: now,
       changeFrequency: 'monthly',

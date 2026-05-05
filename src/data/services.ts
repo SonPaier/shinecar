@@ -27,6 +27,7 @@ export interface ServiceData {
   image: string;
   faq: ServiceFaq[];
   keywords: string[];
+  googleReviewId?: string;
 }
 
 const serviceImage1 = 'https://cdn.builder.io/api/v1/image/assets%2Fa59c3b14b9b7404f8e5c72990dc66950%2Fa70409b6c6f74d1f8eef91a32c353e5c?format=webp&width=800';
@@ -205,7 +206,7 @@ export const services: ServiceData[] = [
     navTitle: 'Powłoka ceramiczna',
     title: 'Powłoki Ceramiczne',
     pageTitle: 'Powłoka ceramiczna na samochód Łuków',
-    metaTitle: 'Powłoka Ceramiczna Łuków — Cena od 1000 zł | ShineCar',
+    metaTitle: 'Powłoka Ceramiczna Łuków — Cena od 1000 zł',
     metaDescription:
       'Powłoka ceramiczna na samochód w Łukowie. Cena od 1000 zł. Hydrofobowość, ochrona UV, głębia koloru. Zadzwoń: 782 195 321.',
     description:
@@ -214,7 +215,7 @@ export const services: ServiceData[] = [
       'Jeśli planujesz położenie powłoki ceramicznej na swój samochód i mieszkasz w Łukowie, Siedlcach, Międzyrzecu Podlaskim czy Radzyniu Podlaskim, nasze studio to miejsce, gdzie technologia łączy się z pasją do motoryzacji.',
     ],
     features: [
-      'Gwarancja 36–60 miesięcy (zależnie od pakietu)',
+      'Deklarowana trwałość producenta 36–60 miesięcy (zależnie od pakietu)',
       'Ekstremalny połysk i głębia koloru',
       'Hydrofobowość — woda spływa w kroplach',
       'Ochrona przed UV, chemikaliami i zanieczyszczeniami',
@@ -241,6 +242,27 @@ export const services: ServiceData[] = [
           'Korekta lakieru: Aby uzyskać idealną gładkość i blask, przeprowadzamy polerowanie maszynowe, usuwając drobne rysy i hologramy.',
           'Aplikacja powłoki SiO2: Precyzyjnie nakładamy warstwy ochronne nie tylko na lakier, ale również – na życzenie – na felgi, szyby czy elementy z tworzyw sztucznych.',
           'Utwardzanie: Pojazd pozostaje w kontrolowanych warunkach, aby powłoka mogła w pełni związać się z lakierem, co gwarantuje jej trwałość nawet do 5-7 lat.',
+        ],
+      },
+      {
+        heading: 'Korekta lakieru przed powłoką ceramiczną — dlaczego to krok obowiązkowy?',
+        paragraphs: [
+          'Ceramika nie maskuje rys — wręcz przeciwnie, „zamyka" je pod sobą. Gdy nałożysz powłokę na lakier z mikrozarysowaniami, hologramami czy swirl markami, defekty zostaną tam widoczne tak samo jak przed aplikacją, a ich późniejsze usunięcie wymaga zdjęcia całej powłoki. Dlatego każda profesjonalna aplikacja powinna być poprzedzona korektą lakieru — maszynowym polerowaniem, które doprowadza powierzchnię do idealnej gładkości.',
+          'Wyjątkiem są nowe samochody prosto z salonu — zwykle wystarcza im sama dekontaminacja (usunięcie wosku transportowego i osadów z placu). Każdy używany samochód oceniamy pod oświetleniem punktowym LED i dopiero wtedy decydujemy o zakresie korekty: jedno-, dwu- lub trzystopniowej.',
+        ],
+      },
+      {
+        heading: 'Powłoka ceramiczna czy folia PPF — co wybrać?',
+        paragraphs: [
+          'To dwie zupełnie różne formy ochrony, które się nie wykluczają, tylko uzupełniają. Powłoka ceramiczna chroni lakier chemicznie — przed UV, kwaśnymi deszczami, ptasimi odchodami, żywicą, solą drogową i osadami z twardej wody. Nadaje przy tym lustrzany blask i hydrofobowość. Nie chroni jednak przed uderzeniami kamieni i odpryskami, bo to fizycznie niemożliwe przy warstwie kilku mikronów.',
+          'Folia PPF (Paint Protection Film) to gruba, przezroczysta folia, która absorbuje uderzenia mechanicznie. Niezbędna na elementy najbardziej narażone — maskę, zderzak, błotniki, lusterka, progi. Najpełniejsze zabezpieczenie to połączenie obu rozwiązań: PPF na przód i powłoka ceramiczna na całe auto, w tym na folię.',
+        ],
+      },
+      {
+        heading: 'Nowy samochód z salonu — najlepszy moment na powłokę',
+        paragraphs: [
+          'Lakier prosto z fabryki jest w najlepszej kondycji, jaką kiedykolwiek będzie mieć — bez rys z myjni, bez hologramów, bez osadów z twardej wody. Aplikacja powłoki ceramicznej w tym momencie jest zwykle szybsza i tańsza, bo nie wymaga kosztownej korekty. Wielu naszych klientów przyprowadza nowe auto bezpośrednio z salonu, jeszcze z folią transportową na progach — wystarczy wtedy dekontaminacja i aplikacja.',
+          'Im dłużej zwlekasz, tym więcej drobnych zarysowań i osadów osadza się na lakierze i tym więcej pracy korekcyjnej trzeba wykonać przed powłoką. Z perspektywy odsprzedaży auta — udokumentowana powłoka ceramiczna z pierwszych miesięcy życia samochodu to konkretny argument za wyższą ceną.',
         ],
       },
       {
@@ -279,8 +301,129 @@ export const services: ServiceData[] = [
         answer:
           'Nie, ceramika jest w pełni przezroczysta. Wyciąga głębię koloru i nadaje efekt "mokrego" połysku, ale nie zmienia odcienia lakieru.',
       },
+      {
+        question: 'Czy powłoka ceramiczna chroni przed kamieniami i odpryskami?',
+        answer:
+          'Nie. Ceramika to ochrona chemiczna — przed UV, kwaśnymi deszczami, ptasimi odchodami, solą drogową i osadami z twardej wody. Przed uderzeniami kamieni i głębokimi rysami chroni wyłącznie folia PPF. Najpełniejsze zabezpieczenie to PPF na przód auta + ceramika na całe nadwozie.',
+      },
+      {
+        question: 'Czy powłoka ceramiczna chroni przed zarysowaniami?',
+        answer:
+          'Powłoka zwiększa twardość powierzchni do 9H w skali ołówkowej, co utrudnia powstawanie codziennych mikrozarysowań — np. tych pojawiających się w trakcie mycia. Nie zastąpi jednak folii ochronnej. Drobne, codzienne rysy — tak; głębokie zarysowania mechaniczne — nie.',
+      },
+      {
+        question: 'Czy mogę nałożyć powłokę ceramiczną na nowe auto z salonu?',
+        answer:
+          'Jak najbardziej — to wręcz idealny moment. Lakier nowego samochodu zwykle nie wymaga korekty, a jedynie dekontaminacji z wosku transportowego, więc cały proces jest szybszy i tańszy. Im wcześniej zaaplikujesz powłokę, tym dłużej lakier zachowa fabryczną kondycję.',
+      },
+      {
+        question: 'Jak dbać o auto po aplikacji powłoki ceramicznej?',
+        answer:
+          'Pielęgnacja jest prostsza niż bez powłoki: myj samochód ręcznie lub na myjni bezdotykowej, używaj szamponu o neutralnym pH, unikaj myjni szczotkowych, a ptasie odchody i żywicę usuwaj jak najszybciej. Przez pierwsze 7 dni po aplikacji nie myjemy auta — powłoka utwardza się w tym czasie. Co 6–12 miesięcy zalecamy wizytę kontrolną z odświeżeniem boosterem.',
+      },
     ],
-    keywords: ['powłoka ceramiczna Łuków', 'powłoka ceramiczna cena', 'powłoka ceramiczna na samochód', 'ceramic coating Łuków', 'powłoka SiO2', 'ile kosztuje powłoka ceramiczna', 'powłoki ceramiczne Łuków', 'zabezpieczenie lakieru'],
+    keywords: ['powłoka ceramiczna Łuków', 'powłoka ceramiczna cena', 'powłoka ceramiczna na samochód', 'ceramic coating Łuków', 'powłoka SiO2', 'ile kosztuje powłoka ceramiczna', 'powłoki ceramiczne Łuków', 'powłoka ceramiczna Siedlce', 'powłoka ceramiczna Radzyń Podlaski', 'powłoka ceramiczna Międzyrzec Podlaski', 'powłoka ceramiczna Biała Podlaska', 'zabezpieczenie lakieru Lubelszczyzna'],
+    googleReviewId: 'marcin-kardas',
+  },
+  {
+    slug: 'powloki-grafenowe',
+    urlSlug: 'powloka-grafenowa-lukow',
+    navTitle: 'Powłoka grafenowa',
+    title: 'Powłoki Grafenowe',
+    pageTitle: 'Powłoka grafenowa Łuków – Innowacyjna ochrona lakieru z tlenkiem grafenu',
+    metaTitle: 'Powłoka Grafenowa Łuków — Cena od 1 200 zł',
+    metaDescription:
+      'Powłoka grafenowa na auto w Łukowie. Antystatyczność, odporność na water spoty, wyjątkowa śliskość. Cena od 1 200 zł. ShineCar Łuków — zadzwoń: 782 195 321.',
+    description:
+      'Powłoka grafenowa to kolejny krok w ewolucji zabezpieczeń lakieru. W ShineCar w Łukowie aplikujemy nowoczesne powłoki, w których do matrycy SiO2 dodano nanoskalowy tlenek grafenu (GO). Efektem jest twardsza, bardziej śliska i antystatyczna warstwa ochronna, która znacznie skuteczniej radzi sobie z osadami z twardej wody, kurzem i codziennymi zabrudzeniami niż klasyczna ceramika.',
+    content: [
+      'Jeśli mieszkasz w Łukowie, Siedlcach, Radzyniu Podlaskim, Międzyrzecu Podlaskim albo Białej Podlaskiej i szukasz powłoki, która utrzyma lakier w salonowej kondycji przez kolejne sezony — grafen jest jednym z najbardziej zaawansowanych rozwiązań, jakie możesz dziś wybrać.',
+    ],
+    features: [
+      'Tlenek grafenu (GO) wbudowany w matrycę SiO2',
+      'Wyjątkowa śliskość — woda spływa szybciej niż z ceramiki',
+      'Właściwości antystatyczne — mniej kurzu na karoserii',
+      'Skuteczna ochrona przed water spotami w twardej wodzie',
+      'Odporność termiczna do ok. 800°C',
+      'Deklarowana trwałość producenta 2–5 lat (zależnie od pakietu)',
+    ],
+    sections: [
+      {
+        heading: 'Czym jest powłoka grafenowa i jak działa?',
+        paragraphs: [
+          'Powłoka grafenowa to najnowsza generacja preparatów ochronnych na lakier. W odróżnieniu od klasycznych powłok opartych wyłącznie na dwutlenku krzemu (SiO2), w grafenowej do matrycy krzemionkowej dodano nanoskalowy tlenek grafenu (GO) — materiał, który zrewolucjonizował nauki materiałowe i w 2010 roku doczekał się Nagrody Nobla. To jednowarstwowa struktura węglowa o nietypowych właściwościach mechanicznych, termicznych i elektrycznych, które przekładają się wprost na jakość ochrony lakieru.',
+          'W praktyce nanopłatki tlenku grafenu wbudowane w matrycę SiO2 tworzą gęstszą, bardziej jednorodną i znacznie bardziej śliską warstwę ochronną. Krople wody przybierają na takiej powierzchni bardziej kuliste kształty i spływają szybciej, zabierając ze sobą brud, pył i — co najważniejsze — osady mineralne. To kluczowa przewaga nad klasyczną ceramiką.',
+          'Dochodzi do tego efekt antystatyczny. Tradycyjne powłoki SiO2 potrafią gromadzić ładunek elektrostatyczny, który ściąga drobiny kurzu z otoczenia. Grafen ten ładunek rozprasza, dzięki czemu lakier po prostu mniej się brudzi między kolejnymi myciami. Jeśli regularnie jeździsz po drogach gruntowych w okolicach Łukowa albo parkujesz pod drzewami, różnicę poczujesz w pierwszym tygodniu.',
+        ],
+      },
+      {
+        heading: 'Grafen vs ceramika — gdzie naprawdę widać różnicę?',
+        paragraphs: [
+          'Powłoka ceramiczna to sprawdzona klasyka. Powłoka grafenowa robi krok dalej w kilku kluczowych obszarach:',
+        ],
+        bullets: [
+          'Wyższa śliskość: niższy współczynnik tarcia, krople wody spływają szybciej i zostawiają mniej osadów wapiennych.',
+          'Antystatyczność: lakier nie przyciąga elektrostatycznie pyłu i kurzu — auto dłużej wygląda na świeżo umyte.',
+          'Odporność termiczna: tlenek grafenu wytrzymuje temperatury do ok. 800°C, klasyczna ceramika SiO2 — zwykle do ok. 300°C.',
+          'Lepsza ochrona przed water spotami: woda nie zdąża wyschnąć i nie zostawia mineralnych plam, które są zmorą wielu właścicieli aut.',
+          'Większa głębia koloru: efekt „mokrego" połysku jest bardziej intensywny, szczególnie na ciemnych lakierach.',
+        ],
+        tip: 'Jeśli mieszkasz w okolicy, w której woda z kranu jest twarda, a samochód regularnie stoi na otwartym parkingu, grafen poradzi sobie z osadami i kurzem zauważalnie lepiej niż czysta ceramika.',
+      },
+      {
+        heading: 'Trwałość, antystatyczność i pakiety dostępne w ShineCar Łuków',
+        paragraphs: [
+          'Trwałość powłoki grafenowej zależy od wybranego pakietu i bieżącej pielęgnacji. W ShineCar Łuków oferujemy trzy warianty: 2-letni, 3-letni i 5-letni — różniące się grubością nakładanej warstwy oraz koncentracją tlenku grafenu w produkcie.',
+          'Antystatyczność grafenu ma też prozaiczny, ale bardzo praktyczny wymiar. Właściciele aut zabezpieczonych grafenem zwykle zgłaszają, że samochód „wygląda na czysty" nawet 2–3 tygodnie po myciu — w porównaniu do ok. 1–1,5 tygodnia przy klasycznej ceramice. W warunkach codziennej jazdy między Łukowem, Siedlcami i Radzyniem Podlaskim oznacza to mniej rytualnego mycia bez żadnego kompromisu w wyglądzie.',
+          'Aby utrzymać deklarowaną przez producenta trwałość, kluczowe są: mycie bez szczotek (najlepiej metodą dwóch wiader), szampon o neutralnym pH dedykowany do powłok oraz raz w roku wizyta kontrolna w naszym studiu — sprawdzimy stan warstwy i w razie potrzeby odświeżymy ją boosterem.',
+        ],
+      },
+      {
+        heading: 'Powłoka grafenowa w Łukowie i okolicach — dla kogo?',
+        paragraphs: [
+          'Grafen polecamy szczególnie wtedy, gdy: chcesz długoterminowej ochrony bez kompromisów w wyglądzie, masz ciemny lakier, który łapie każdy water spot, parkujesz pod chmurką, a Twoje auto jeździ codziennie. Sprawdzi się też świetnie na nowym samochodzie prosto z salonu — w połączeniu z dekontaminacją jest wtedy najtańszy i najszybszy w aplikacji.',
+          'Studio ShineCar znajduje się w Świderkach 155 (gmina Łuków, woj. lubelskie) — 5 minut od centrum Łukowa. Obsługujemy klientów z Łukowa, Siedlec, Radzynia Podlaskiego, Międzyrzeca Podlaskiego, Białej Podlaskiej, Lubartowa, Ryk i Garwolina — większość naszych klientów dojeżdża do nas drogą krajową lub trasą S17.',
+          'Jeśli wahasz się między ceramiką, grafenem a elastomerem — zapraszamy na bezpłatną konsultację w ShineCar Łuków. Oględziny lakieru pod oświetleniem punktowym, krótka rozmowa o tym, jak korzystasz z auta, i wyjdziemy z propozycją dopasowaną do realnego stylu użytkowania, a nie do cennika.',
+        ],
+      },
+    ],
+    price: 'od 1 200 zł do 2 100 zł',
+    duration: '2–4 dni',
+    image: serviceImage1,
+    faq: [
+      {
+        question: 'Czym powłoka grafenowa różni się od ceramicznej?',
+        answer:
+          'Powłoka grafenowa to ewolucja klasycznej ceramiki SiO2 — do matrycy krzemionkowej dodano nanoskalowy tlenek grafenu (GO). Daje to wyższą śliskość, lepszą odporność na water spoty, właściwości antystatyczne i znacznie wyższą odporność termiczną (ok. 800°C vs ok. 300°C dla ceramiki). Praktycznie oznacza to mniej kurzu na karoserii i mniej osadów po deszczu czy myciu.',
+      },
+      {
+        question: 'Ile kosztuje powłoka grafenowa w Łukowie?',
+        answer:
+          'W ShineCar w Łukowie powłoka grafenowa 2-letnia kosztuje od 1 200 zł, 3-letnia od 1 600 zł, a 5-letnia od 2 100 zł netto. Końcowa cena zależy od rozmiaru pojazdu i tego, czy lakier wymaga wcześniejszej korekty. Po oględzinach przygotujemy indywidualną wycenę.',
+      },
+      {
+        question: 'Czy grafen jest lepszy od ceramiki?',
+        answer:
+          'W większości scenariuszy — tak. Grafen ma wyższą śliskość, jest antystatyczny, lepiej radzi sobie z water spotami i ma wyższą odporność termiczną. Ceramika pozostaje sensownym wyborem, jeśli zależy Ci na maksymalnie klasycznym, „szklistym" blasku i niższym budżecie. Podczas konsultacji w studio doradzimy, co realnie sprawdzi się przy Twoim stylu użytkowania.',
+      },
+      {
+        question: 'Czy powłoka grafenowa pomaga przy water spotach?',
+        answer:
+          'Tak — to jeden z głównych powodów, dla których wybiera się grafen. Wyższa śliskość sprawia, że krople wody spływają szybciej i nie zdążają wyschnąć na lakierze, a właściwości antystatyczne dodatkowo zmniejszają przyciąganie zanieczyszczeń mineralnych. To zauważalna różnica zwłaszcza tam, gdzie woda z kranu jest twarda.',
+      },
+      {
+        question: 'Jak długo utrzymuje się powłoka grafenowa?',
+        answer:
+          'Deklarowana przez producenta trwałość to 2, 3 lub 5 lat — zależnie od wybranego pakietu. Realna żywotność zależy od warunków eksploatacji i pielęgnacji: kluczowe jest unikanie myjni szczotkowych, stosowanie szamponów o neutralnym pH oraz raz w roku przegląd kontrolny z ewentualnym odświeżeniem warstwy wierzchniej.',
+      },
+      {
+        question: 'Czy powłoka grafenowa wymaga specjalnej pielęgnacji?',
+        answer:
+          'Nie — wręcz przeciwnie, codzienne mycie jest prostsze niż bez powłoki. Wystarczy mycie ręczne metodą dwóch wiader lub myjnia bezdotykowa, szampon dedykowany do powłok i unikanie myjni szczotkowych. Przez pierwsze 7 dni po aplikacji nie myjemy auta — powłoka potrzebuje czasu na pełne utwardzenie.',
+      },
+    ],
+    keywords: ['powłoka grafenowa Łuków', 'powłoka grafenowa cena', 'grafen na auto', 'graphene coating Łuków', 'powłoka grafenowa Siedlce', 'powłoka grafenowa Radzyń Podlaski', 'powłoka grafenowa Międzyrzec Podlaski', 'powłoka grafenowa Biała Podlaska', 'powłoka grafenowa Lubartów', 'antystatyczna powłoka', 'tlenek grafenu lakier', 'grafen vs ceramika', 'graphene coating Lubelszczyzna'],
+    googleReviewId: 'artur-sprycha',
   },
   {
     slug: 'powloki-elastomerowe',
@@ -301,7 +444,7 @@ export const services: ServiceData[] = [
       'Totalna hydrofobowość — woda i brud uciekają z lakieru',
       'Odporność na chemię drogową, sól i ptasie odchody',
       'Głębia koloru i „mokry" połysk',
-      'Gwarancja trwałości do 7 lat',
+      'Deklarowana trwałość producenta do 7 lat',
       'Elastyczność — lepsza absorpcja uderzeń niż ceramika',
     ],
     sections: [
@@ -320,10 +463,24 @@ export const services: ServiceData[] = [
       {
         heading: 'Korzyści z wyboru elastomeru w ShineCar Łuków',
         bullets: [
-          'Długoterminowa gwarancja: Oferujemy pakiety zabezpieczenia z pisemną gwarancją trwałości od 3 do nawet 7 lat.',
-          'Ochrona przed blaknięciem: Blokada promieni UV sprawia, że Twój lakier zachowa fabryczną intensywność koloru przez lata.',
-          'Wzrost wartości auta: Samochód z udokumentowanym zabezpieczeniem elastomerowym to pewniejsza sprzedaż i wyższa cena w przyszłości.',
-          'Łatwość eksploatacji: Zapomnij o uciążliwym szorowaniu – brud nie ma punktu zaczepienia.',
+          'Długi okres ochrony: deklarowana przez producenta trwałość pakietów od 3 do nawet 7 lat.',
+          'Ochrona przed blaknięciem: blokada promieni UV utrzymuje fabryczną intensywność koloru przez lata.',
+          'Wzrost wartości auta: udokumentowane zabezpieczenie elastomerem to konkretny argument przy odsprzedaży.',
+          'Łatwość eksploatacji: brud nie ma punktu zaczepienia — koniec z uciążliwym szorowaniem.',
+        ],
+      },
+      {
+        heading: 'Korekta lakieru przed elastomerem — fundament trwałości',
+        paragraphs: [
+          'Elastomer, podobnie jak każda powłoka ochronna, nie zakrywa defektów — utrwala je. Jeśli przed aplikacją lakier ma mikrorysy, hologramy albo swirl marki, zostaną one „zamknięte" pod warstwą elastomeru i będą widoczne przez cały okres jej trwałości. Dlatego nasza standardowa procedura to: dokładne mycie i dekontaminacja, ocena lakieru pod oświetleniem punktowym, korekta jedno-, dwu- lub trzystopniowa, a dopiero potem aplikacja powłoki.',
+          'Cały proces — od mycia po pełne utwardzenie — trwa zwykle 2–4 dni roboczych. Nie skracamy go, bo elastomer wymaga kontrolowanej temperatury i wilgotności w trakcie wiązania. Po odbiorze samochodu warto przez kolejne 7 dni unikać mycia, a w pierwszych tygodniach traktować lakier delikatnie.',
+        ],
+      },
+      {
+        heading: 'Elastomer czy folia PPF — co wybrać?',
+        paragraphs: [
+          'Powłoka elastomerowa daje silną ochronę chemiczną i efekt self-healingu drobnych mikrorys, ale nie zatrzyma kamienia uderzającego w maskę przy 120 km/h. Przed odpryskami od kamieni i głębokimi zarysowaniami mechanicznymi chroni wyłącznie folia PPF. Jeśli regularnie jeździsz autostradą, S17, drogami wojewódzkimi w okolicach Łukowa i Siedlec albo trasami leśnymi — PPF na przód jest praktycznie konieczny.',
+          'Najpełniejsza konfiguracja to PPF na maskę, zderzak, błotniki i lusterka oraz powłoka elastomerowa na całe nadwozie (w tym na folię). Łączymy w ten sposób ochronę mechaniczną z chemiczną — z pełnym efektem wet looka i samoregeneracji.',
         ],
       },
       {
@@ -356,10 +513,26 @@ export const services: ServiceData[] = [
       {
         question: 'Ile kosztuje powłoka elastomerowa w ShineCar Łuków?',
         answer:
-          'Koszt powłoki elastomerowej zależy od wybranego pakietu gwarancyjnego: 3 lata od 1 800 zł, 5 lat od 2 300 zł, 7 lat od 2 800 zł netto. Cena może się różnić w zależności od rozmiaru pojazdu.',
+          'Koszt powłoki elastomerowej zależy od wybranego pakietu trwałości: 3 lata od 1 800 zł, 5 lat od 2 300 zł, 7 lat od 2 800 zł netto. Cena może się różnić w zależności od rozmiaru pojazdu i tego, czy lakier wymaga wcześniejszej korekty.',
+      },
+      {
+        question: 'Czy elastomer chroni przed kamieniami i odpryskami?',
+        answer:
+          'Nie — elastomer to ochrona chemiczna i częściowo mechaniczna (samoregeneracja drobnych rys), ale nie zatrzyma uderzenia kamienia. Przed odpryskami chroni wyłącznie folia PPF. W praktyce najlepsze rozwiązanie to PPF na przód auta + powłoka elastomerowa na całe nadwozie.',
+      },
+      {
+        question: 'Jak działa efekt self-healing w powłoce elastomerowej?',
+        answer:
+          'Najdrobniejsze rysy powstałe przy myciu „znikają" pod wpływem ciepła — wystarcza ekspozycja na słońce w cieplejsze dni albo polanie auta ciepłą wodą. Mechanizm działa wyłącznie dla mikrorys w warstwie powłoki — nie zregeneruje głębokich uszkodzeń lakieru.',
+      },
+      {
+        question: 'Czy można nałożyć elastomer na nowe auto z salonu?',
+        answer:
+          'Tak — to jeden z najlepszych momentów na aplikację. Lakier nowego auta zwykle wymaga jedynie dekontaminacji z wosku transportowego i nie potrzebuje pełnej korekty, dzięki czemu cały proces jest szybszy i tańszy.',
       },
     ],
-    keywords: ['powłoka elastomerowa Łuków', 'powłoki elastomerowe', 'zabezpieczenie lakieru Łuków', 'ochrona lakieru'],
+    keywords: ['powłoka elastomerowa Łuków', 'powłoki elastomerowe', 'zabezpieczenie lakieru Łuków', 'ochrona lakieru', 'self-healing powłoka', 'powłoka elastomerowa cena', 'powłoka elastomerowa Siedlce', 'powłoka elastomerowa Radzyń Podlaski', 'powłoka elastomerowa Międzyrzec Podlaski', 'powłoka elastomerowa Biała Podlaska', 'powłoka elastomerowa Lubartów'],
+    googleReviewId: 'dominik-kisiel',
   },
   {
     slug: 'detailing-wnetrza',
