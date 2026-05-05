@@ -399,7 +399,7 @@ export const services: ServiceData[] = [
       {
         question: 'Ile kosztuje powłoka grafenowa w Łukowie?',
         answer:
-          'W ShineCar w Łukowie powłoka grafenowa 2-letnia kosztuje od 1 200 zł, 3-letnia od 1 600 zł, a 5-letnia od 2 100 zł netto. Końcowa cena zależy od rozmiaru pojazdu i tego, czy lakier wymaga wcześniejszej korekty. Po oględzinach przygotujemy indywidualną wycenę.',
+          'W ShineCar w Łukowie powłoka grafenowa 2-letnia kosztuje od 1 200 zł, 3-letnia od 1 600 zł, a 5-letnia od 2 100 zł netto. Końcowa cena zależy od rozmiaru pojazdu i tego, jak mocnej korekty wymaga lakier. Po oględzinach przygotujemy indywidualną wycenę.',
       },
       {
         question: 'Czy grafen jest lepszy od ceramiki?',
@@ -513,7 +513,7 @@ export const services: ServiceData[] = [
       {
         question: 'Ile kosztuje powłoka elastomerowa w ShineCar Łuków?',
         answer:
-          'Koszt powłoki elastomerowej zależy od wybranego pakietu trwałości: 3 lata od 1 800 zł, 5 lat od 2 300 zł, 7 lat od 2 800 zł netto. Cena może się różnić w zależności od rozmiaru pojazdu i tego, czy lakier wymaga wcześniejszej korekty.',
+          'Koszt powłoki elastomerowej zależy od wybranego pakietu trwałości: 3 lata od 1 800 zł, 5 lat od 2 300 zł, 7 lat od 2 800 zł netto. Cena może się różnić w zależności od rozmiaru pojazdu i tego, jak mocnej korekty wymaga lakier.',
       },
       {
         question: 'Czy elastomer chroni przed kamieniami i odpryskami?',
