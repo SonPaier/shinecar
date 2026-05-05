@@ -923,17 +923,17 @@ export default function PowlokaOchronnaNaAutoPage() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                 <a
                   href="tel:+48782195321"
-                  className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:brightness-110 transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:brightness-110 transition-all whitespace-nowrap"
                 >
-                  <Phone className="w-4 h-4" />
-                  +48 782 195 321
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <span className="whitespace-nowrap">+48 782 195 321</span>
                 </a>
                 <a
                   href="mailto:shinecarkosmetyka@o2.pl"
-                  className="flex items-center gap-2 px-6 py-3 border border-border rounded-full text-foreground hover:border-primary transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-full text-foreground hover:border-primary transition-colors whitespace-nowrap"
                 >
-                  <Mail className="w-4 h-4" />
-                  shinecarkosmetyka@o2.pl
+                  <Mail className="w-4 h-4 shrink-0" />
+                  <span className="whitespace-nowrap">shinecarkosmetyka@o2.pl</span>
                 </a>
                 <Link
                   href="/wycena"

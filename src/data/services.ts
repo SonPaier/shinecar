@@ -224,7 +224,7 @@ export const services: ServiceData[] = [
     ],
     sections: [
       {
-        heading: 'Powłoka ceramiczna na samochód - co daje i czy się opłaca?',
+        heading: 'Korzyści z wyboru ceramiki w ShineCar Łuków',
         paragraphs: ['Ceramika to nie wosk – to tarcza, która wnika w mikropory lakieru, tworząc z nim trwałe wiązanie chemiczne. Dzięki swojej unikalnej strukturze nadaje karoserii niesamowitą twardość i odporność na czynniki zewnętrzne. Wybierając powłokę w ShineCar, zyskujesz:'],
         bullets: [
           'Ochronę przed chemią i naturą: Ceramika minimalizuje ryzyko korozji oraz powstawania trwałych wżerów po ptasich odchodach czy owadach.',
@@ -349,15 +349,7 @@ export const services: ServiceData[] = [
     ],
     sections: [
       {
-        heading: 'Czym jest powłoka grafenowa i jak działa?',
-        paragraphs: [
-          'Powłoka grafenowa to najnowsza generacja preparatów ochronnych na lakier. W odróżnieniu od klasycznych powłok opartych wyłącznie na dwutlenku krzemu (SiO2), w grafenowej do matrycy krzemionkowej dodano nanoskalowy tlenek grafenu (GO) — materiał, który zrewolucjonizował nauki materiałowe i w 2010 roku doczekał się Nagrody Nobla. To jednowarstwowa struktura węglowa o nietypowych właściwościach mechanicznych, termicznych i elektrycznych, które przekładają się wprost na jakość ochrony lakieru.',
-          'W praktyce nanopłatki tlenku grafenu wbudowane w matrycę SiO2 tworzą gęstszą, bardziej jednorodną i znacznie bardziej śliską warstwę ochronną. Krople wody przybierają na takiej powierzchni bardziej kuliste kształty i spływają szybciej, zabierając ze sobą brud, pył i — co najważniejsze — osady mineralne. To kluczowa przewaga nad klasyczną ceramiką.',
-          'Dochodzi do tego efekt antystatyczny. Tradycyjne powłoki SiO2 potrafią gromadzić ładunek elektrostatyczny, który ściąga drobiny kurzu z otoczenia. Grafen ten ładunek rozprasza, dzięki czemu lakier po prostu mniej się brudzi między kolejnymi myciami. Jeśli regularnie jeździsz po drogach gruntowych w okolicach Łukowa albo parkujesz pod drzewami, różnicę poczujesz w pierwszym tygodniu.',
-        ],
-      },
-      {
-        heading: 'Grafen vs ceramika — gdzie naprawdę widać różnicę?',
+        heading: 'Korzyści z wyboru grafenu w ShineCar Łuków',
         paragraphs: [
           'Powłoka ceramiczna to sprawdzona klasyka. Powłoka grafenowa robi krok dalej w kilku kluczowych obszarach:',
         ],
@@ -369,6 +361,14 @@ export const services: ServiceData[] = [
           'Większa głębia koloru: efekt „mokrego" połysku jest bardziej intensywny, szczególnie na ciemnych lakierach.',
         ],
         tip: 'Jeśli mieszkasz w okolicy, w której woda z kranu jest twarda, a samochód regularnie stoi na otwartym parkingu, grafen poradzi sobie z osadami i kurzem zauważalnie lepiej niż czysta ceramika.',
+      },
+      {
+        heading: 'Czym jest powłoka grafenowa i jak działa?',
+        paragraphs: [
+          'Powłoka grafenowa to najnowsza generacja preparatów ochronnych na lakier. W odróżnieniu od klasycznych powłok opartych wyłącznie na dwutlenku krzemu (SiO2), w grafenowej do matrycy krzemionkowej dodano nanoskalowy tlenek grafenu (GO) — materiał, który zrewolucjonizował nauki materiałowe i w 2010 roku doczekał się Nagrody Nobla. To jednowarstwowa struktura węglowa o nietypowych właściwościach mechanicznych, termicznych i elektrycznych, które przekładają się wprost na jakość ochrony lakieru.',
+          'W praktyce nanopłatki tlenku grafenu wbudowane w matrycę SiO2 tworzą gęstszą, bardziej jednorodną i znacznie bardziej śliską warstwę ochronną. Krople wody przybierają na takiej powierzchni bardziej kuliste kształty i spływają szybciej, zabierając ze sobą brud, pył i — co najważniejsze — osady mineralne. To kluczowa przewaga nad klasyczną ceramiką.',
+          'Dochodzi do tego efekt antystatyczny. Tradycyjne powłoki SiO2 potrafią gromadzić ładunek elektrostatyczny, który ściąga drobiny kurzu z otoczenia. Grafen ten ładunek rozprasza, dzięki czemu lakier po prostu mniej się brudzi między kolejnymi myciami. Jeśli regularnie jeździsz po drogach gruntowych w okolicach Łukowa albo parkujesz pod drzewami, różnicę poczujesz w pierwszym tygodniu.',
+        ],
       },
       {
         heading: 'Trwałość, antystatyczność i pakiety dostępne w ShineCar Łuków',
@@ -449,6 +449,15 @@ export const services: ServiceData[] = [
     ],
     sections: [
       {
+        heading: 'Korzyści z wyboru elastomeru w ShineCar Łuków',
+        bullets: [
+          'Długi okres ochrony: deklarowana przez producenta trwałość pakietów od 3 do nawet 7 lat.',
+          'Ochrona przed blaknięciem: blokada promieni UV utrzymuje fabryczną intensywność koloru przez lata.',
+          'Wzrost wartości auta: udokumentowane zabezpieczenie elastomerem to konkretny argument przy odsprzedaży.',
+          'Łatwość eksploatacji: brud nie ma punktu zaczepienia — koniec z uciążliwym szorowaniem.',
+        ],
+      },
+      {
         heading: 'Dlaczego elastomer wygrywa z powłoką ceramiczną?',
         paragraphs: [
           'Choć ceramika jest świetnym rozwiązaniem, powłoki elastomerowe oferują korzyści, których nie znajdziesz nigdzie indziej:',
@@ -458,15 +467,6 @@ export const services: ServiceData[] = [
           'Totalna hydrofobowość: Woda i brud dosłownie uciekają z lakieru. Dzięki temu mycie auta staje się czystą przyjemnością, a samochód znacznie dłużej pozostaje czysty.',
           'Odporność na „chemię": Elastomer wykazuje potężną odporność na agresywne środki czyszczące, sól drogową oraz soki z drzew i ptasie odchody, które są zmorą każdego kierowcy.',
           'Głębia koloru: Powłoka nadaje lakierowi niesamowity, „mokry" połysk, który podkreśla każdą linię nadwozia Twojego samochodu.',
-        ],
-      },
-      {
-        heading: 'Korzyści z wyboru elastomeru w ShineCar Łuków',
-        bullets: [
-          'Długi okres ochrony: deklarowana przez producenta trwałość pakietów od 3 do nawet 7 lat.',
-          'Ochrona przed blaknięciem: blokada promieni UV utrzymuje fabryczną intensywność koloru przez lata.',
-          'Wzrost wartości auta: udokumentowane zabezpieczenie elastomerem to konkretny argument przy odsprzedaży.',
-          'Łatwość eksploatacji: brud nie ma punktu zaczepienia — koniec z uciążliwym szorowaniem.',
         ],
       },
       {
