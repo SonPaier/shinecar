@@ -23,10 +23,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getBlogBySlug(slug);
   if (!article) return {};
 
+  const ogImage = article.image.replace(/width=\d+/, 'width=1200');
+
   return {
     title: article.metaTitle,
     description: article.metaDescription,
-    keywords: article.keywords,
     alternates: {
       canonical: `/blog/${article.slug}`,
     },
@@ -37,13 +38,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       locale: 'pl_PL',
       publishedTime: article.date,
-      images: [{ url: article.image, width: 1200, height: 630, alt: article.title }],
+      authors: ['https://shinecar.pl/#marcin'],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: article.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: article.metaTitle,
       description: article.metaDescription,
-      images: [article.image],
+      images: [ogImage],
     },
   };
 }
@@ -72,17 +74,15 @@ export default async function BlogArticlePage({ params }: Props) {
     description: article.metaDescription,
     image: article.image,
     datePublished: article.date,
-    dateModified: article.date,
+    dateModified: article.updatedAt ?? article.date,
     author: {
-      '@type': 'Organization',
-      name: 'ShineCar',
-      url: 'https://shinecar.pl',
+      '@type': 'Person',
+      '@id': 'https://shinecar.pl/#marcin',
+      name: 'Marcin Przybysławski',
+      jobTitle: 'Główny detailer ShineCar',
+      worksFor: { '@id': 'https://shinecar.pl/#org' },
     },
-    publisher: {
-      '@type': 'Organization',
-      name: 'ShineCar',
-      url: 'https://shinecar.pl',
-    },
+    publisher: { '@id': 'https://shinecar.pl/#org' },
     mainEntityOfPage: `https://shinecar.pl/blog/${article.slug}`,
   };
 
@@ -115,7 +115,10 @@ export default async function BlogArticlePage({ params }: Props) {
                   <h1 className="font-luxury text-3xl lg:text-4xl text-foreground">
                     {article.title}
                   </h1>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                    <span className="text-foreground/80">
+                      Marcin Przybysławski · Główny detailer ShineCar
+                    </span>
                     <span className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       {formatDate(article.date)}
@@ -215,7 +218,7 @@ export default async function BlogArticlePage({ params }: Props) {
                     <Button asChild>
                       <a href="tel:+48782195321">
                         <Phone className="w-4 h-4 mr-2" />
-                        Zadzwoń: 782 195 321
+                        Zadzwoń: +48 782 195 321
                       </a>
                     </Button>
                     <Button asChild variant="outline">

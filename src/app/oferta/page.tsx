@@ -124,7 +124,7 @@ export default function OfertaPage() {
                   <Button asChild>
                     <a href="tel:+48782195321">
                       <Phone className="w-4 h-4 mr-2" />
-                      Zadzwoń: 782 195 321
+                      Zadzwoń: +48 782 195 321
                     </a>
                   </Button>
                 </div>

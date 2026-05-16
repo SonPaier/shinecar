@@ -4,6 +4,7 @@ const SeoJsonLd: React.FC = () => {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'AutomotiveBusiness',
+    '@id': 'https://shinecar.pl/#org',
     name: 'ShineCar',
     url: 'https://shinecar.pl/',
     description:
@@ -37,7 +38,7 @@ const SeoJsonLd: React.FC = () => {
     email: 'shinecarkosmetyka@o2.pl',
     image:
       'https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2F9eebaa4a7f7d4db3a5b81f4f46b76ff6?format=webp&width=1200',
-    priceRange: 'PLN 150 - 16000',
+    priceRange: 'PLN 250 - 16000',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -52,13 +53,6 @@ const SeoJsonLd: React.FC = () => {
         closes: '16:00',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '3',
-      bestRating: '5',
-      worstRating: '1',
-    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Usługi detailingu samochodowego',
@@ -69,7 +63,7 @@ const SeoJsonLd: React.FC = () => {
           priceSpecification: {
             '@type': 'PriceSpecification',
             priceCurrency: 'PLN',
-            minPrice: 5500,
+            minPrice: 4500,
             maxPrice: 16000,
           },
         },
@@ -79,18 +73,18 @@ const SeoJsonLd: React.FC = () => {
           priceSpecification: {
             '@type': 'PriceSpecification',
             priceCurrency: 'PLN',
-            minPrice: 800,
-            maxPrice: 2500,
+            minPrice: 1000,
+            maxPrice: 2700,
           },
         },
         {
           '@type': 'Offer',
-          itemOffered: { '@type': 'Service', name: 'Powłoki Ceramiczne i Elastomerowe' },
+          itemOffered: { '@type': 'Service', name: 'Powłoki Ceramiczne, Grafenowe i Elastomerowe' },
           priceSpecification: {
             '@type': 'PriceSpecification',
             priceCurrency: 'PLN',
-            minPrice: 1500,
-            maxPrice: 3000,
+            minPrice: 1000,
+            maxPrice: 2800,
           },
         },
         {
@@ -99,7 +93,7 @@ const SeoJsonLd: React.FC = () => {
           priceSpecification: {
             '@type': 'PriceSpecification',
             priceCurrency: 'PLN',
-            minPrice: 400,
+            minPrice: 250,
           },
         },
         {
@@ -108,7 +102,7 @@ const SeoJsonLd: React.FC = () => {
           priceSpecification: {
             '@type': 'PriceSpecification',
             priceCurrency: 'PLN',
-            minPrice: 150,
+            minPrice: 250,
           },
         },
       ],
@@ -128,15 +122,12 @@ const SeoJsonLd: React.FC = () => {
     ],
     founder: {
       '@type': 'Person',
+      '@id': 'https://shinecar.pl/#marcin',
       name: 'Marcin Przybysławski',
       jobTitle: 'Założyciel i główny detailer',
       telephone: '+48 782 195 321',
       email: 'shinecarkosmetyka@o2.pl',
-      worksFor: {
-        '@type': 'AutomotiveBusiness',
-        name: 'ShineCar',
-        url: 'https://shinecar.pl',
-      },
+      worksFor: { '@id': 'https://shinecar.pl/#org' },
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Świderki 155',
@@ -161,14 +152,11 @@ const SeoJsonLd: React.FC = () => {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': 'https://shinecar.pl/#website',
     name: 'ShineCar',
     url: 'https://shinecar.pl',
     description: 'Profesjonalny detailing samochodowy w Łukowie — folie PPF, korekta lakieru, powłoki ceramiczne.',
-    publisher: {
-      '@type': 'AutomotiveBusiness',
-      name: 'ShineCar',
-      url: 'https://shinecar.pl',
-    },
+    publisher: { '@id': 'https://shinecar.pl/#org' },
     inLanguage: 'pl-PL',
   };
 

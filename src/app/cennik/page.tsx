@@ -12,14 +12,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/cennik',
   },
-  keywords: [
-    'cennik detailing Łuków',
-    'ceny folie PPF',
-    'ile kosztuje korekta lakieru',
-    'cennik powłoki ceramiczne',
-    'cennik mycie detailingowe',
-    'cennik detailing wnętrza',
-  ],
   openGraph: {
     url: 'https://shinecar.pl/cennik',
     title: 'Cennik Detailingu Łuków — Folie PPF, Korekta, Powłoki',

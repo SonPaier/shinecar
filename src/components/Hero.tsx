@@ -29,7 +29,7 @@ const Hero = () => {
               <h1 className="font-luxury text-5xl sm:text-6xl lg:text-7xl leading-[1.1] text-foreground">ShineCar — Detailing Samochodowy i Folie PPF Łuków</h1>
             </AnimatedDiv>
             <AnimatedDiv>
-              <h2 className="text-xl text-muted-foreground max-w-2xl font-normal">Profesjonalna ochrona i pielęgnacja Twojego samochodu. Wykonujemy aplikację folii PPF, korektę lakieru, powłoki ceramiczne oraz kompleksowy detailing wnętrza.</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl font-normal">Profesjonalna ochrona i pielęgnacja Twojego samochodu. Wykonujemy aplikację folii PPF, korektę lakieru, powłoki ceramiczne oraz kompleksowy detailing wnętrza.</p>
             </AnimatedDiv>
             <div className="flex flex-col sm:flex-row gap-5 pt-2">
               <AnimatedDiv>

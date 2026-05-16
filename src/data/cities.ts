@@ -14,7 +14,10 @@ export interface CityData {
   faq: CityFaq[];
   distance?: string;
   keywords: string[];
+  updatedAt?: string;
 }
+
+export const CITIES_SECTION_UPDATED_AT = '2026-04-29';
 
 export const cities: CityData[] = [
   {

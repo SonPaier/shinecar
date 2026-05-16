@@ -12,12 +12,15 @@ export interface BlogArticle {
   excerpt: string;
   image: string;
   date: string;
+  updatedAt?: string;
   readTime: string;
   keywords: string[];
   content: string[];
   sections: BlogSection[];
   relatedServices?: string[];
 }
+
+export const BLOG_SECTION_UPDATED_AT = '2026-05-16';
 
 const blogImage1 = 'https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2Faa9360e1636e474abf453627071b5f19?format=webp&width=800';
 const blogImage2 = 'https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2F4381a02e8bfa475ab87e0a6da7f9e7fa?format=webp&width=800';
@@ -28,13 +31,14 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'pranie-tapicerki-czyszczenie-skor-lukow',
     title: 'Pranie tapicerki i czyszczenie skór w Łukowie – Kompleksowy poradnik pielęgnacji',
-    metaTitle: 'Pranie Tapicerki i Czyszczenie Skór Łuków — Poradnik ShineCar',
+    metaTitle: 'Pranie Tapicerki i Czyszczenie Skór Łuków — Poradnik',
     metaDescription:
       'Jak profesjonalnie wyczyścić tapicerkę materiałową i skórzaną? Poradnik pielęgnacji wnętrza samochodu od ShineCar Łuków. Pranie ekstrakcyjne, impregnacja, ozonowanie.',
     excerpt:
       'Wnętrze samochodu to Twoja wizytówka. Dowiedz się, jak profesjonalnie zadbać o tapicerkę materiałową i skórzaną, czego unikać i kiedy oddać auto do specjalisty.',
     image: blogImage1,
     date: '2026-03-08',
+    updatedAt: '2026-05-16',
     readTime: '5 min',
     keywords: [
       'pranie tapicerki Łuków',
@@ -96,13 +100,14 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'folia-ppf-polysk-czy-mat',
     title: 'Folia PPF: Połysk czy Satynowy Mat? Wybierz charakter swojego auta',
-    metaTitle: 'Folia PPF Połysk czy Mat — Porównanie ShineCar Łuków',
+    metaTitle: 'Folia PPF Połysk czy Mat — Porównanie Wykończeń',
     metaDescription:
       'Folia PPF połysk vs mat — które wykończenie wybrać? Porównanie obu typów folii ochronnej PPF. Pakiety ochronne, samoregeneracja, efekt wizualny. ShineCar Łuków.',
     excerpt:
       'Błyszcząca czy matowa folia PPF? Obie chronią tak samo potężnie, ale wizualnie to dwa różne światy. Sprawdź, które wykończenie pasuje do Twojego auta.',
     image: blogImage2,
     date: '2026-03-08',
+    updatedAt: '2026-05-16',
     readTime: '4 min',
     keywords: [
       'folia PPF połysk',
@@ -170,13 +175,14 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'ile-wytrzymuje-powloka-ceramiczna',
     title: 'Ile naprawdę wytrzymuje powłoka ceramiczna? Fakty i mity',
-    metaTitle: 'Ile Wytrzymuje Powłoka Ceramiczna? Fakty i Mity — ShineCar Łuków',
+    metaTitle: 'Ile Wytrzymuje Powłoka Ceramiczna? Fakty i Mity — Łuków',
     metaDescription:
       'Ile lat utrzymuje się powłoka ceramiczna? Rozwiewamy mity o ceramice samochodowej. Serwis powłoki, pielęgnacja, trwałość. Uczciwe fakty od ShineCar Łuków.',
     excerpt:
       'Powłoka ceramiczna to nie magia — to zaawansowana technologia, która wymaga odpowiedniego traktowania. Rozwiewamy najpopularniejsze mity i wyjaśniamy fakty.',
     image: blogImage3,
     date: '2026-03-08',
+    updatedAt: '2026-05-16',
     readTime: '6 min',
     keywords: [
       'powłoka ceramiczna trwałość',
@@ -235,13 +241,14 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'folia-ppf-kompendium-ochrony-lakieru',
     title: 'Folia PPF w Łukowie: Kompletne kompendium ochrony lakieru i wnętrza',
-    metaTitle: 'Folia PPF Łuków — Kompletny Przewodnik Ochrony Lakieru | ShineCar',
+    metaTitle: 'Folia PPF Łuków — Kompletny Przewodnik Ochrony Lakieru',
     metaDescription:
       'Wszystko o folii PPF w jednym miejscu: rodzaje folii, pakiety ochronne, proces aplikacji, FAQ. Kompletne kompendium od ShineCar Łuków. Folie bezbarwne, matowe, karbonowe.',
     excerpt:
       'Bezbarwna folia PPF to najskuteczniejsza metoda ochrony lakieru. Poznaj rodzaje folii, pakiety ochronne, proces aplikacji i odpowiedzi na najczęstsze pytania.',
     image: blogImage4,
     date: '2026-03-08',
+    updatedAt: '2026-05-16',
     readTime: '7 min',
     keywords: [
       'folia PPF Łuków',

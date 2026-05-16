@@ -28,7 +28,10 @@ export interface ServiceData {
   faq: ServiceFaq[];
   keywords: string[];
   googleReviewId?: string;
+  updatedAt?: string;
 }
+
+export const SERVICES_SECTION_UPDATED_AT = '2026-04-29';
 
 const serviceImage1 = 'https://cdn.builder.io/api/v1/image/assets%2Fa59c3b14b9b7404f8e5c72990dc66950%2Fa70409b6c6f74d1f8eef91a32c353e5c?format=webp&width=800';
 const serviceImage2 = 'https://cdn.builder.io/api/v1/image/assets%2F75ea2179cd6f4e158ae5465605ccca73%2Faa9360e1636e474abf453627071b5f19?format=webp&width=800';
@@ -208,7 +211,7 @@ export const services: ServiceData[] = [
     pageTitle: 'Powłoka ceramiczna na samochód Łuków',
     metaTitle: 'Powłoka Ceramiczna Łuków — Cena od 1000 zł',
     metaDescription:
-      'Powłoka ceramiczna na samochód w Łukowie. Cena od 1000 zł. Hydrofobowość, ochrona UV, głębia koloru. Zadzwoń: 782 195 321.',
+      'Powłoka ceramiczna na samochód w Łukowie. Cena od 1000 zł. Hydrofobowość, ochrona UV, głębia koloru. Zadzwoń: +48 782 195 321.',
     description:
       'Lakier samochodowy jest nieustannie wystawiony na próbę. Promieniowanie UV, kwaśne deszcze, sól drogowa czy ptasie odchody to codzienność, która niszczy strukturę karoserii. Aby zapewnić autu długotrwałą ochronę i podkreślić jego estetykę, w ShineCar w Łukowie oferujemy profesjonalną aplikację powłok ceramicznych. To rozwiązanie od lat uznawane za standard w detailingu premium, tworzące na samochodzie twardą, przezroczystą warstwę ochronną.',
     content: [
@@ -333,7 +336,7 @@ export const services: ServiceData[] = [
     pageTitle: 'Powłoka grafenowa Łuków – Innowacyjna ochrona lakieru z tlenkiem grafenu',
     metaTitle: 'Powłoka Grafenowa Łuków — Cena od 1 200 zł',
     metaDescription:
-      'Powłoka grafenowa na auto w Łukowie. Antystatyczność, odporność na water spoty, wyjątkowa śliskość. Cena od 1 200 zł. ShineCar Łuków — zadzwoń: 782 195 321.',
+      'Powłoka grafenowa na auto w Łukowie. Antystatyczność, odporność na water spoty, wyjątkowa śliskość. Cena od 1 200 zł. ShineCar Łuków — zadzwoń: +48 782 195 321.',
     description:
       'Powłoka grafenowa to kolejny krok w ewolucji zabezpieczeń lakieru. W ShineCar w Łukowie aplikujemy nowoczesne powłoki, w których do matrycy SiO2 dodano nanoskalowy tlenek grafenu (GO). Efektem jest twardsza, bardziej śliska i antystatyczna warstwa ochronna, która znacznie skuteczniej radzi sobie z osadami z twardej wody, kurzem i codziennymi zabrudzeniami niż klasyczna ceramika.',
     content: [
@@ -869,7 +872,7 @@ export const services: ServiceData[] = [
     pageTitle: 'Myjnia Ręczna Łuków — Bezpieczne Mycie Samochodu w ShineCar',
     metaTitle: 'Myjnia Ręczna Łuków — Bezpieczne Mycie Samochodu od 250 zł',
     metaDescription:
-      'Profesjonalna myjnia ręczna w Łukowie. Metoda Two Bucket Wash — zero rys, pełna czystość. Bezpieczne mycie samochodów z folią PPF i powłoką ceramiczną. Zadzwoń: 782 195 321.',
+      'Profesjonalna myjnia ręczna w Łukowie. Metoda Two Bucket Wash — zero rys, pełna czystość. Bezpieczne mycie samochodów z folią PPF i powłoką ceramiczną. Zadzwoń: +48 782 195 321.',
     description:
       'Myjnia automatyczna i bezdotykowa rysują lakier — to fakt, którego nie da się obejść. W ShineCar w Łukowie oferujemy profesjonalne mycie ręczne metodą Two Bucket Wash, która gwarantuje bezpieczeństwo lakieru przy każdym myciu. Nasz proces eliminuje ryzyko mikrozarysowań, które z czasem matowią nawet najdroższy lakier.',
     content: [

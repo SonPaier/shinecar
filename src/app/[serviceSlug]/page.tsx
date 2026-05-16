@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
 
   const url = getServiceUrl(service);
+  const ogImage = service.image.replace(/width=\d+/, 'width=1200');
 
   return {
     title: service.metaTitle,
     description: service.metaDescription,
-    keywords: service.keywords,
     alternates: {
       canonical: url,
     },
@@ -33,13 +33,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://shinecar.pl${url}`,
       type: 'website',
       locale: 'pl_PL',
-      images: [{ url: service.image, width: 1200, height: 630, alt: service.title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: service.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: service.metaTitle,
       description: service.metaDescription,
-      images: [service.image],
+      images: [ogImage],
     },
   };
 }

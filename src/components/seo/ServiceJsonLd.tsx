@@ -10,41 +10,7 @@ export default function ServiceJsonLd({ service }: ServiceJsonLdProps) {
     '@type': 'Service',
     name: service.title,
     description: service.description,
-    provider: {
-      '@type': 'AutomotiveBusiness',
-      name: 'ShineCar',
-      url: 'https://shinecar.pl',
-      telephone: '+48 782 195 321',
-      priceRange: '$$',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Świderki 155',
-        addressLocality: 'Świderki',
-        addressRegion: 'lubelskie',
-        postalCode: '21-411',
-        addressCountry: 'PL',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 51.8451033,
-        longitude: 22.3348136,
-      },
-      hasMap: 'https://www.google.com/maps?q=51.8451033,22.3348136',
-      openingHoursSpecification: [
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '08:00',
-          closes: '18:00',
-        },
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: 'Saturday',
-          opens: '09:00',
-          closes: '16:00',
-        },
-      ],
-    },
+    provider: { '@id': 'https://shinecar.pl/#org' },
     areaServed: [
       { '@type': 'City', name: 'Łuków', addressCountry: 'PL' },
       { '@type': 'City', name: 'Siedlce', addressCountry: 'PL' },

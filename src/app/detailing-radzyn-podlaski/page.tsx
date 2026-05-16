@@ -7,7 +7,6 @@ const city = getCityBySlug('detailing-radzyn-podlaski')!;
 export const metadata: Metadata = {
   title: city.metaTitle,
   description: city.metaDescription,
-  keywords: city.keywords,
   alternates: { canonical: `/${city.slug}` },
   openGraph: {
     title: city.metaTitle,
@@ -26,21 +25,13 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'AutomotiveBusiness',
-  name: `ShineCar — Detailing Samochodowy ${city.name}`,
-  url: `https://shinecar.pl/${city.slug}`,
+  '@type': 'Service',
+  serviceType: 'Detailing samochodowy',
+  name: `Detailing samochodowy ${city.name}`,
   description: city.metaDescription,
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Świderki 155',
-    addressLocality: 'Świderki',
-    postalCode: '21-411',
-    addressRegion: 'lubelskie',
-    addressCountry: 'PL',
-  },
+  url: `https://shinecar.pl/${city.slug}`,
   areaServed: { '@type': 'City', name: city.name, addressCountry: 'PL' },
-  telephone: '+48 782 195 321',
-  email: 'shinecarkosmetyka@o2.pl',
+  provider: { '@id': 'https://shinecar.pl/#org' },
 };
 
 export default function Page() {

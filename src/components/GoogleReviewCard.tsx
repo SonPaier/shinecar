@@ -13,11 +13,7 @@ export default function GoogleReviewCard({ review, heading, asSection = true }: 
   const reviewJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Review',
-    itemReviewed: {
-      '@type': 'AutomotiveBusiness',
-      name: 'ShineCar',
-      url: 'https://shinecar.pl',
-    },
+    itemReviewed: { '@id': 'https://shinecar.pl/#org' },
     author: {
       '@type': 'Person',
       name: review.author,
